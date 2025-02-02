@@ -3,6 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Language Center - Learn English and other languages with experienced teachers.">
+    <meta name="author" content="Language Center Team">
+    <title>Language Center</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
+
+    <!-- Optional: Add a favicon for a more polished appearance -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Welcome to Language Center</h1>
+        </div>
+        <p>Your pathway to language learning and success!</p>
+    </header>
+
+    <!-- Mobile navigation toggle -->
+    <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#downloads">Downloads</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Language Center!</h2>
+            <p>We offer a variety of language programs for all ages. Whether you're a young child starting your English journey or an adult looking to improve your skills, we are here to help you achieve your goals!</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At the Language Center, we believe in offering personalized and engaging lessons. Our experienced teachers are dedicated to helping every student thrive. Stay tuned for more information about our curriculum and the fantastic programs we offer.</p>
+        </section>
+
+        <section id="downloads" class="download-section">
+            <h2>Download Materials</h2>
+            <p>Click on the links below to access learning materials for study at home:</p>
+            <a href="#">Download English Grammar PDF</a>
+            <a href="#">Download Vocabulary List</a>
+            <a href="#">Download Listening Exercises</a>
+        </section>
+
+        <section id="events" class="event-section">
+            <h2>Upcoming Events</h2>
+            <p>Check out our calendar for upcoming events and activities:</p>
+            <a href="#">January: New Year Language Camp</a>
+            <a href="#">February: English Conversation Club</a>
+            <a href="#">March: Spring Break Intensive Course</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Language Center. All rights reserved.</p>
+        <p><a href="#contact">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Center</title>
     <style>
         body {
