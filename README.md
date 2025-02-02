@@ -1,1 +1,0 @@
-# language-centerjp.GitHub.io
