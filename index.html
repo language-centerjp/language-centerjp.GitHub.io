@@ -3,42 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Language Center - Playful English School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>The Language Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="brand-header">
-        <div class="logo-mark">
-            <svg viewBox="0 0 100 100" class="logo-symbol">
-                <circle cx="50" cy="70" r="25" fill="#6F4E37"/>
-                <path d="M30 40 Q50 20 70 40 L50 60 Z" fill="#F4E9CD"/>
-                <circle cx="50" cy="35" r="4" fill="#87CEEB"/>
-            </svg>
+    <header>
+        <div class="logo-container">
+            <div class="logo-shape">
+                <div class="logo-circle"></div>
+                <div class="logo-triangle"></div>
+                <div class="logo-dots"></div>
+            </div>
+            <h1>The Language Center</h1>
         </div>
-        <h1 class="logo-text">
-            <span class="L-arrow">L</span>anguage Center
-        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="teachers.html">Teachers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <nav class="playful-nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Learn Languages Through Play! 🌍</h2>
+            <div class="decorative-balls">
+                <span class="blue-ball"></span>
+                <span class="pink-ball"></span>
+                <span class="green-ball"></span>
+            </div>
+        </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2 class="slanted-text">Welcome to The Language Center!</h2>
-                <p>Fun and engaging English lessons for all ages.</p>
+    <section class="featured-courses">
+        <h2>Popular Courses</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>👶 Kindergarten Explorers</h3>
+                <p>Ages 4-6 | Basic Vocabulary</p>
+                <div class="decorative-ball"></div>
             </div>
-            <div class="globe-container">
-                <img src="globe-image.jpg" alt="Globe representing worldwide learning">
+            <div class="course-card">
+                <h3>🎓 University Prep</h3>
+                <p>Advanced Grammar & Conversation</p>
+                <div class="decorative-ball"></div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
