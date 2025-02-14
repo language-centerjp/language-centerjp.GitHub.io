@@ -147,7 +147,7 @@ h1, h2, h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.8rem;
   color: #003366;
-  transform: rotate(-15deg);
+  transform: rotate(-20deg);
   transform-origin: left center;
   margin-bottom: 1rem;
 }
@@ -156,7 +156,7 @@ h1, h2, h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.2rem;
   color: #003366;
-  transform: rotate(-10deg);
+  transform: rotate(-20deg);
   transform-origin: left center;
   margin-bottom: 1rem;
 }
@@ -165,7 +165,7 @@ h1, h2, h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1rem;
   color: #003366;
-  transform: rotate(-8deg);
+  transform: rotate(-20deg);
   transform-origin: left center;
   margin-bottom: 1rem;
 }
@@ -174,7 +174,7 @@ h1, h2, h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1rem;
   color: #003366;
-  transform: rotate(-5deg);
+  transform: rotate(-20deg);
   transform-origin: left center;
   margin-top: 1rem;
 }
