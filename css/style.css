@@ -137,7 +137,7 @@ h1, h2, h3 {
 /* Container for Japanese text overlay on flyer */
 .jp-text-container {
   position: absolute;
-  top: 150px;  /* Adjust these values to align text with your design */
+  top: 250px;  /* Adjust these values to align text with your design */
   left: 20px;
   width: 260px;
 }
