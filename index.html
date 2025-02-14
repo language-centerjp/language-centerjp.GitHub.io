@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Language Center</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Language Center</title>
+  <!-- Existing fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- New Japanese-capable font -->
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <div class="logo-shape">
-                <div class="logo-circle"></div>
-                <div class="logo-triangle"></div>
-                <div class="logo-dots"></div>
-            </div>
-            <h1>The Language Center</h1>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="teachers.html">Teachers</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo-container">
+      <div class="logo-shape">
+        <div class="logo-circle"></div>
+        <div class="logo-triangle"></div>
+        <div class="logo-dots"></div>
+      </div>
+      <h1>The Language Center</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <section class="hero">
+  <!-- New layout container with left flyer panel and main content -->
+  <div class="layout-container">
+    <!-- Flyer panel (left side) -->
+    <aside class="flyer-panel">
+      <!-- The background image (flyer-bg.png) provides the globe, yellow background, slanted oval shapes, etc. -->
+      <div class="jp-text-container">
+        <!-- Editable Japanese text overlaid on the flyer background -->
+        <h2 class="jp-title">The Language Center</h2>
+        <p class="jp-subtitle">
+          フレンドリーで教養のある講師だと、<br />
+          楽しい雰囲気の中で英語をエンジョイ！
+        </p>
+        <p class="jp-body">
+          ランゲージセンターでは<br />
+          ひとりひとりの目標の到達に向けて<br />
+          丁寧な指導が受けられる<br />
+          大学受験や英検、<br />
+          テスト対策まで幅広いコースが充実しています！
+        </p>
+        <p class="jp-pricing">
+          入会金 無料<br />
+          個人レッスン：7,000円<br />
+          グループレッスン：6,500円<br />
+          月４回
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main content area (right side) -->
+    <div class="main-content">
+      <section class="hero">
         <div class="hero-content">
-            <h2>Learn Languages Through Play! 🌍</h2>
-            <div class="decorative-balls">
-                <span class="blue-ball"></span>
-                <span class="pink-ball"></span>
-                <span class="green-ball"></span>
-            </div>
+          <h2>Learn Languages Through Play! 🌍</h2>
+          <div class="decorative-balls">
+            <span class="blue-ball"></span>
+            <span class="pink-ball"></span>
+            <span class="green-ball"></span>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="featured-courses">
+      <section class="featured-courses">
         <h2>Popular Courses</h2>
         <div class="course-cards">
-            <div class="course-card">
-                <h3>👶 Kindergarten Explorers</h3>
-                <p>Ages 4-6 | Basic Vocabulary</p>
-                <div class="decorative-ball"></div>
-            </div>
-            <div class="course-card">
-                <h3>🎓 University Prep</h3>
-                <p>Advanced Grammar & Conversation</p>
-                <div class="decorative-ball"></div>
-            </div>
+          <div class="course-card">
+            <h3>👶 Kindergarten Explorers</h3>
+            <p>Ages 4-6 | Basic Vocabulary</p>
+            <div class="decorative-ball"></div>
+          </div>
+          <div class="course-card">
+            <h3>🎓 University Prep</h3>
+            <p>Advanced Grammar &amp; Conversation</p>
+            <div class="decorative-ball"></div>
+          </div>
         </div>
-    </section>
+      </section>
+    </div>
+  </div>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
