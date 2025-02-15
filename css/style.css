@@ -154,7 +154,7 @@ h1, h2, h3 {
 
 .jp-subtitle {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
@@ -163,7 +163,7 @@ h1, h2, h3 {
 
 .jp-body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 1rem;
+  font-size: .8rem;
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
@@ -172,7 +172,7 @@ h1, h2, h3 {
 
 .jp-pricing {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 1rem;
+  font-size: .8rem;
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
