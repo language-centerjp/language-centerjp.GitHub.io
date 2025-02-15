@@ -149,7 +149,7 @@ h1, h2, h3 {
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .jp-subtitle {
@@ -158,7 +158,7 @@ h1, h2, h3 {
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .jp-body {
@@ -167,7 +167,7 @@ h1, h2, h3 {
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .jp-pricing {
@@ -176,7 +176,7 @@ h1, h2, h3 {
   color: #003366;
   transform: rotate(-20deg);
   transform-origin: left center;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 /* Main content area on the right */
