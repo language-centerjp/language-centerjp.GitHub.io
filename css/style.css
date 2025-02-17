@@ -128,7 +128,7 @@ h1, h2, h3 {
 /* Flyer panel on left */
 .flyer-panel {
   position: relative;
-  width: 290px; /* Adjust width as needed */
+  width: 300px; /* Adjust width as needed */
   height: 100vh; /* Full viewport height */
   background: url('../images/flyer-bg.png') no-repeat center/cover;
   /* The flyer-bg.png should be your cleaned-up flyer image (with text removed) */
