@@ -123,6 +123,7 @@ h1, h2, h3 {
 /* Layout container for two-column design */
 .layout-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Flyer panel on left */
@@ -131,6 +132,7 @@ h1, h2, h3 {
   width: 300px; /* Adjust width as needed */
   height: 100vh; /* Full viewport height */
   background: url('../images/flyer-bg.png') no-repeat center/cover;
+  flex-shrink: 0;
   /* The flyer-bg.png should be your cleaned-up flyer image (with text removed) */
 }
 
