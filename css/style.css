@@ -159,6 +159,7 @@ h1, h2, h3 {
   transform: rotate(-20deg);
   transform-origin: left center;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .jp-body {
@@ -168,6 +169,7 @@ h1, h2, h3 {
   transform: rotate(-20deg);
   transform-origin: left center;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .jp-pricing {
@@ -177,6 +179,7 @@ h1, h2, h3 {
   transform: rotate(-20deg);
   transform-origin: left center;
   margin-top: 2rem;
+  text-align: center;
 }
 
 /* Main content area on the right */
