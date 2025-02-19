@@ -129,7 +129,7 @@ h1, h2, h3 {
 /* Flyer panel on left */
 .flyer-panel {
   position: relative;
-  width: 400px;
+  width: 200px;
   height: 100vh;
   background: url('../images/flyer-bg.png') no-repeat center/cover;
   flex-shrink: 0; /* Prevents shrinking */
@@ -139,7 +139,7 @@ h1, h2, h3 {
 .jp-text-container {
   position: absolute;
   top: 350px;
-  left: 20px;
+  left: 70px;
   width: 260px;
 }
 
