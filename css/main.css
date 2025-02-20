@@ -31,8 +31,7 @@ body {
   line-height: 1.5;
 }
 
-/* ========== New Header Structure ========== */
-/* The header is fixed at the top with two parts: logo area and navigation */
+/* ========== Header Structure ========== */
 header {
   background: var(--primary-yellow);
   padding: 10px 20px;
@@ -44,7 +43,6 @@ header {
   z-index: 1000;
 }
 
-/* Logo area at the very top */
 .header-top {
   display: flex;
   justify-content: center;
@@ -60,7 +58,6 @@ header {
   width: auto;
 }
 
-/* Navigation area below the logo */
 .header-nav {
   background: var(--primary-yellow);
 }
@@ -87,20 +84,20 @@ header {
   color: var(--primary-pink);
 }
 
-/* Add top padding to the main content to prevent it from being hidden behind the fixed header */
+/* ========== Main Content ========== */
 main {
-  padding-top: 240px; /* Adjust this value based on the total height of your header */
+  margin-top: 240px; /* Adjusted to match the total height of the header */
 }
 
 #hero {
-  height: calc(100vh - 240px); /* Adjust based on the new header height */
-  margin-top: 0; /* Remove extra top margin */
+  height: calc(100vh - 240px); /* Adjusted based on the new header height */
+  margin-top: 0;
 }
 
 .left-panel {
   position: relative;
   width: 100%;
-  background-color: var(--primary-yellow); /* fallback background */
+  background-color: var(--primary-yellow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,7 +146,7 @@ footer {
   margin-top: 2em;
 }
 
-/* Additional styling for sub-pages... */
+/* ========== Sub-Pages ========== */
 .page-header {
   background-color: var(--primary-pink);
   color: var(--white-color);
@@ -173,9 +170,7 @@ footer {
   border-radius: 4px;
 }
 
-/* ============================= */
-/* Flyer Panel (if still needed elsewhere) */
-/* ============================= */
+/* ========== Flyer Panel ========== */
 .layout-container {
   display: flex;
   flex-wrap: wrap;
@@ -233,7 +228,7 @@ footer {
 /* ========== Dark Mode (optional) ========== */
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-yellow: #C9B458;
-    --white-color: #2B2B2B;
+    --primary-yellow: #c9b458;
+    --white-color: #2b2b2b;
   }
 }
