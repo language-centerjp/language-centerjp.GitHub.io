@@ -1,80 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Language Center</title>
-  <!-- Existing fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- New Japanese-capable font -->
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Language Center</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     <header>
-    <div class="logo-container">
-      <div class="logo-shape">
-        <div class="logo-circle"></div>
-        <div class="logo-triangle"></div>
-        <div class="logo-dots"></div>
-      </div>
-      <h1>The Language Center</h1>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="teachers.html">Teachers</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-    <!-- New layout container with left flyer panel and main content -->
-  <div class="layout-container">
-    <!-- Flyer panel (left side) -->
-    <aside class="flyer-panel">
-      <!-- The background image (flyer-bg.png) provides the globe, yellow background, slanted oval shapes, etc. -->
-      <div class="jp-text-container">
-        <!-- Editable Japanese text overlaid on the flyer background -->
-        <h2 class="jp-title"></h2>
-        <p class="jp-subtitle">
-          フレンドリーで教養のある講師たちと、<br />
-          楽しい雰囲気の中で英語をエンジョイ！
-        </p>
-        <p class="jp-body">
-          ランゲージセンターでは<br />
-          ひとりひとりの目標の到達に向けて<br />
-          日常会話やビジネス英語、<br />
-          テスト対策などの様々なコースが<br />
-          充実しています。
-        </p>
-        <p class="jp-pricing">
-          入会金 無料<br />
-          個人レッスン：7,000円<br />
-          グループレッスン：6,500円<br />
-          月４回
-        </p>
-      </div>
-    </aside>
-
-    <!-- Main content area (right side) -->
-
-    <section class="contact-section">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="teachers.html">Teachers</a>
+            <a href="courses.html">Courses</a>
+        </nav>
+    </header>
+    <section class="contact-info">
+        <p>Email: info@languagecenter.com</p>
+        <p>Phone: 090-1234-5678</p>
+    </section>
+    <section class="contact-form">
+        <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required>
-            
+            <input type="text" id="name" required>
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit" class="playful-btn">
-                Send Message <div class="decorative-ball"></div>
-            </button>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
