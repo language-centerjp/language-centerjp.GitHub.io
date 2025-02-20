@@ -23,7 +23,10 @@ body {
   color: var(--text-color);
   background-color: var(--primary-yellow);
   line-height: 1.5;
-  padding-top: 220px; /* Adjust based on header height */
+}
+
+main {
+  padding-top: 220px; /* Add top padding to main content */
 }
 
 /* ========== Header ========== */
