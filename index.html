@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Language Center | Home</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- HEADER / NAVIGATION -->
+  <!-- HEADER -->
   <header>
-    <nav>
+    <!-- Logo Section -->
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="header-nav">
       <ul>
-        <li><a href="index.html">ホーム</a></li>
+        <li><a href="index.html" class="active">ホーム</a></li>
         <li><a href="courses.html">コース</a></li>
         <li><a href="teachers.html">講師</a></li>
         <li><a href="testimonials.html">受講者の声</a></li>
@@ -29,11 +36,6 @@
   <!-- HERO SECTION -->
   <section id="hero">
     <div class="left-panel">
-      <!-- Background color or image is set in CSS -->
-      <div class="logo-container">
-        <!-- Globe Logo with Pink Text -->
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo" />
-      </div>
       <div class="hero-text">
         <h1>ランゲージセンターで英語をエンジョイ！</h1>
         <p>
@@ -47,7 +49,7 @@
     </div>
   </section>
 
-  <!-- MAIN CONTENT (OPTIONAL) -->
+  <!-- MAIN CONTENT -->
   <main>
     <section class="info-section">
       <h2>入会金 無料！</h2>
@@ -68,7 +70,7 @@
     <p>© 2025 The Language Center. All Rights Reserved.</p>
   </footer>
 
-  <script src="js/vendor.js"></script> <!-- Optional for libraries -->
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
