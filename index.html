@@ -31,6 +31,8 @@
         <li><a href="blog.html">ブログ</a></li>
       </ul>
     </nav>
+    <!-- Google Translate Widget Container -->
+    <div id="google_translate_element"></div>
   </header>
 
   <!-- HERO SECTION -->
@@ -39,9 +41,8 @@
       <div class="hero-text">
         <h1>ランゲージセンターで英語をエンジョイ！</h1>
         <p>
-          フレンドリーで楽しい雰囲気の中、日常英会話、トラベル英語、
-          ビジネス英語、テスト対策など多彩なコースが充実！
-          <br><br>
+          フレンドリーで楽しい雰囲気の中、日常英会話、トラベル英語、<br>
+          ビジネス英語、テスト対策など多彩なコースが充実！<br><br>
           Enjoy English in a friendly, fun environment!
         </p>
         <a class="cta-button" href="courses.html">コースを見る</a>
@@ -69,6 +70,18 @@
   <footer>
     <p>© 2025 The Language Center. All Rights Reserved.</p>
   </footer>
+
+  <!-- Google Translate Widget Scripts -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ja', // The original language of your site
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
