@@ -1,92 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Language Center</title>
-  <!-- Existing fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- New Japanese-capable font -->
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <title>The Language Center | Home</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
+
+  <!-- HEADER / NAVIGATION -->
   <header>
-    <div class="logo-container">
-      <div class="logo-shape">
-        <div class="logo-circle"></div>
-        <div class="logo-triangle"></div>
-        <div class="logo-dots"></div>
-      </div>
-      <h1>The Language Center</h1>
-    </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="teachers.html">Teachers</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="courses.html">コース</a></li>
+        <li><a href="teachers.html">講師</a></li>
+        <li><a href="testimonials.html">受講者の声</a></li>
+        <li><a href="locations.html">所在地</a></li>
+        <li><a href="schedule.html">スケジュール＆料金</a></li>
+        <li><a href="about.html">学校について</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- New layout container with left flyer panel and main content -->
-  <div class="layout-container">
-    <!-- Flyer panel (left side) -->
-    <aside class="flyer-panel">
-      <!-- The background image (flyer-bg.png) provides the globe, yellow background, slanted oval shapes, etc. -->
-      <div class="jp-text-container">
-        <!-- Editable Japanese text overlaid on the flyer background -->
-        <h2 class="jp-title"></h2>
-        <p class="jp-subtitle">
-          フレンドリーで教養のある講師たちと、<br />
-          楽しい雰囲気の中で英語をエンジョイ！
-        </p>
-        <p class="jp-body">
-          ランゲージセンターでは<br />
-          ひとりひとりの目標の到達に向けて<br />
-          日常会話やビジネス英語、<br />
-          テスト対策などの様々なコースが<br />
-          充実しています。
-        </p>
-        <p class="jp-pricing">
-          入会金 無料<br />
-          個人レッスン：7,000円<br />
-          グループレッスン：6,500円<br />
-          月４回
-        </p>
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="left-panel">
+      <!-- Background color or image is set in CSS -->
+      <div class="logo-container">
+        <!-- Globe Logo with Pink Text -->
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo" />
       </div>
-    </aside>
-
-    <!-- Main content area (right side) -->
-    <div class="main-content">
-      <section class="hero">
-        <div class="hero-content">
-          <h2>Learn Languages Through Play! 🌍</h2>
-          <div class="decorative-balls">
-            <span class="blue-ball"></span>
-            <span class="pink-ball"></span>
-            <span class="green-ball"></span>
-          </div>
-        </div>
-      </section>
-
-      <section class="featured-courses">
-        <h2>Popular Courses</h2>
-        <div class="course-cards">
-          <div class="course-card">
-            <h3>👶 Kindergarten Explorers</h3>
-            <p>Ages 4-6 | Basic Vocabulary</p>
-            <div class="decorative-ball"></div>
-          </div>
-          <div class="course-card">
-            <h3>🎓 University Prep</h3>
-            <p>Advanced Grammar &amp; Conversation</p>
-            <div class="decorative-ball"></div>
-          </div>
-        </div>
-      </section>
+      <div class="hero-text">
+        <h1>ランゲージセンターで英語をエンジョイ！</h1>
+        <p>
+          フレンドリーで楽しい雰囲気の中、日常英会話、トラベル英語、
+          ビジネス英語、テスト対策など多彩なコースが充実！
+          <br><br>
+          Enjoy English in a friendly, fun environment!
+        </p>
+        <a class="cta-button" href="courses.html">コースを見る</a>
+      </div>
     </div>
-  </div>
+  </section>
 
+  <!-- MAIN CONTENT (OPTIONAL) -->
+  <main>
+    <section class="info-section">
+      <h2>入会金 無料！</h2>
+      <p>
+        個人レッスン：7,000円 / 月4回<br>
+        グループレッスン：6,500円 / 月4回
+      </p>
+      <p>
+        <strong>Address:</strong> 埼玉県川口市○○-○○<br>
+        <strong>Phone:</strong> 090-1766-0693<br>
+        <strong>Email:</strong> <a href="mailto:sean_martinsen@cbr.ocn.ne.jp">sean_martinsen@cbr.ocn.ne.jp</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 The Language Center. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/vendor.js"></script> <!-- Optional for libraries -->
   <script src="js/main.js"></script>
 </body>
 </html>
