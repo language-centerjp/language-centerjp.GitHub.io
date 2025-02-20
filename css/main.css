@@ -1,13 +1,13 @@
 /* ========== Root Variables ========== */
 :root {
   /* Pink (logo text) */
-  --primary-pink: #ff66cc; /* Example; adjust to match pamphlet exactly */
+  --primary-pink: #ff66cc; /* adjust as needed */
 
   /* Bright Yellow (background accent) */
-  --primary-yellow: #f7EE00; /* Example; used for highlights */
+  --primary-yellow: #f7EE00; /* used for header and highlights */
 
   /* Teal/Blue for the globe or accent */
-  --primary-teal: #00cccc; /* Example teal, can be used for backgrounds */
+  --primary-teal: #00cccc;
 
   /* Dark Text or White Text for contrast */
   --text-color: #333;
@@ -27,35 +27,76 @@
 body {
   font-family: var(--font-main);
   color: var(--text-color);
-  background-color: var(--white-color);
+  background-color: var(--white-color); /* If you want entire page yellow, change this to var(--primary-yellow) */
   line-height: 1.5;
 }
 
-/* ========== Navigation ========== */
-header nav {
-  background-color: var(--primary-yellow);
-  padding: 0.5em 1em;
+/* ========== New Header Structure ========== */
+/* The header is fixed at the top with two parts: logo area and navigation */
+header {
+  background: var(--primary-yellow);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-header nav ul {
+
+/* Logo area at the very top */
+.header-top {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.logo-container {
+  display: inline-block;
+}
+
+.globe-logo {
+  height: 60px;  /* Adjust the size as needed */
+  width: auto;
+}
+
+/* Navigation area below the logo */
+.header-nav {
+  background: var(--primary-yellow);
+}
+
+.header-nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
-header nav ul li a {
-  margin: 0 1em;
+
+.header-nav ul li {
+  margin: 0 10px;
+}
+
+.header-nav ul li a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
 }
-header nav ul li a.active {
+
+.header-nav ul li a.active {
   color: var(--primary-pink);
+}
+
+/* Add some top margin for the main content so it doesn't hide behind the fixed header */
+main {
+  margin-top: 120px; /* Adjust depending on header height */
 }
 
 /* ========== Hero Section ========== */
 #hero {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 60px); /* subtract nav height if needed */
+  height: calc(100vh - 120px); /* Adjusted to account for header height */
 }
 
 .left-panel {
@@ -69,12 +110,9 @@ header nav ul li a.active {
   padding: 2em;
 }
 
-.logo-container {
+.logo-container-old {
+  /* This style from your earlier design is now replaced by the fixed header */
   margin-bottom: 1em;
-}
-
-.globe-logo {
-  max-width: 180px; /* Adjust as needed */
 }
 
 .hero-text h1 {
@@ -140,4 +178,67 @@ footer {
   border-radius: 4px;
 }
 
-/* etc... */
+/* ============================= */
+/* Flyer Panel (if still needed elsewhere) */
+/* ============================= */
+.layout-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flyer-panel {
+  position: relative;
+  width: 300px;
+  height: 100vh;
+  background: url('../images/flyer-bg.png') no-repeat center/cover;
+  flex-shrink: 0;
+}
+
+.jp-text-container {
+  position: absolute;
+  top: 350px;
+  left: 40px;
+  width: 260px;
+}
+
+.jp-title {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.8rem;
+  color: #003366;
+  transform: rotate(-20deg);
+  transform-origin: left center;
+  margin-bottom: 2rem;
+}
+
+.jp-subtitle,
+.jp-body,
+.jp-pricing {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #003366;
+  transform: rotate(-20deg);
+  transform-origin: left center;
+  text-align: center;
+}
+
+.jp-subtitle {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.jp-body {
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.jp-pricing {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+/* ========== Dark Mode (optional) ========== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-yellow: #C9B458;
+    --white-color: #2B2B2B;
+  }
+}
