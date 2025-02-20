@@ -26,7 +26,7 @@ body {
 }
 
 main {
-  padding-top: 220px; /* Add top padding to main content */
+  padding-top: 230px; /* Add top padding to main content */
 }
 
 /* ========== Header ========== */
@@ -82,7 +82,7 @@ header {
 
 /* ========== Hero Section ========== */
 #hero {
-  min-height: calc(100vh - 220px); /* Viewport height minus header height */
+  min-height: calc(100vh - 230px); /* Viewport height minus header height */
   display: flex;
   align-items: center;
   background-color: var(--primary-yellow);
