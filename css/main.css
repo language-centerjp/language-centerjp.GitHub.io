@@ -89,17 +89,14 @@ header {
 
 /* Add some top margin for the main content so it doesn't hide behind the fixed header */
 main {
-  margin-top: 300px; /* Adjust depending on header height */
+  main {
+  margin-top: 200px; /* Ensure this matches the actual header height */
 }
 
-/* ========== Hero Section ========== */
 #hero {
-  display: flex;
-  flex-direction: row;
-  height: calc(100vh - 120px); /* Adjusted to account for header height */
-  margin-top:200px; /* Moves the section down by 50px */
+  height: calc(100vh - 200px); /* Adjust based on the new header height */
+  margin-top: 0; /* Remove extra top margin */
 }
-
 .left-panel {
   position: relative;
   width: 100%;
