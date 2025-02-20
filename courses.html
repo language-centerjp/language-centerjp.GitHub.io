@@ -1,245 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Courses - The Language Center</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Language Center | コース</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <div class="logo-shape">
-                <div class="logo-circle"></div>
-                <div class="logo-triangle"></div>
-                <div class="logo-dots"></div>
-            </div>
-            <h1>The Language Center</h1>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="teachers.html">Teachers</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-      <!-- New layout container with left flyer panel and main content -->
-  <div class="layout-container">
-    <!-- Flyer panel (left side) -->
-    <aside class="flyer-panel">
-      <!-- The background image (flyer-bg.png) provides the globe, yellow background, slanted oval shapes, etc. -->
-      <div class="jp-text-container">
-        <!-- Editable Japanese text overlaid on the flyer background -->
-        <h2 class="jp-title"></h2>
-        <p class="jp-subtitle">
-          フレンドリーで教養のある講師たちと、<br />
-          楽しい雰囲気の中で英語をエンジョイ！
-        </p>
-        <p class="jp-body">
-          ランゲージセンターでは<br />
-          ひとりひとりの目標の到達に向けて<br />
-          日常会話やビジネス英語、<br />
-          テスト対策などの様々なコースが<br />
-          充実しています。
-        </p>
-        <p class="jp-pricing">
-          入会金 無料<br />
-          個人レッスン：7,000円<br />
-          グループレッスン：6,500円<br />
-          月４回
-        </p>
-      </div>
-    </aside>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="courses.html" class="active">コース</a></li>
+      <!-- ... rest of nav items ... -->
+    </ul>
+  </nav>
+</header>
 
-    <!-- Main content area (right side) -->
+<main>
+  <section class="page-header">
+    <h1>コース案内</h1>
+    <p>日常英会話からトラベル英語、ビジネス英語、テスト対策まで幅広くご用意しています。</p>
+  </section>
 
-    <main class="courses-main">
-        <h2>Our Courses</h2>
-        
-        <div class="grade-grid">
-            <!-- Kindergarten -->
-            <div class="grade-card">
-                <div class="grade-header">K</div>
-                <h3>Kindergarten Explorers</h3>
-                <ul>
-                    <li>Age: 4-6 years</li>
-                    <li>Level: Beginner</li>
-                    <li>Activities: Songs & Games</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
+  <section class="course-list">
+    <article class="course-item">
+      <h2>日常英会話</h2>
+      <p>初心者～上級者まで、日常会話を中心に総合的に学びます。</p>
+    </article>
+    <article class="course-item">
+      <h2>トラベル英語</h2>
+      <p>海外旅行や出張にすぐ役立つフレーズやマナーを学習。</p>
+    </article>
+    <article class="course-item">
+      <h2>ビジネス英語</h2>
+      <p>プレゼンやミーティング、Eメール対応など、ビジネスシーンに特化。</p>
+    </article>
+    <article class="course-item">
+      <h2>テスト対策</h2>
+      <p>TOEIC、TOEFL、英検など目標スコア達成をサポートします。</p>
+    </article>
+  </section>
+</main>
 
-            <!-- Grades 1-12 -->
-            <div class="grade-card">
-                <div class="grade-header">1</div>
-                <h3>First Grade Fundamentals</h3>
-                <ul>
-                    <li>Age: 6-7 years</li>
-                    <li>Level: Beginner+</li>
-                    <li>Activities: Story Time</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
+<footer>
+  <p>© 2025 The Language Center. All Rights Reserved.</p>
+</footer>
 
-            <div class="grade-card">
-                <div class="grade-header">2</div>
-                <h3>Second Grade Starters</h3>
-                <ul>
-                    <li>Age: 7-8 years</li>
-                    <li>Level: Elementary</li>
-                    <li>Activities: Role Play</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">3</div>
-                <h3>Third Grade Builders</h3>
-                <ul>
-                    <li>Age: 8-9 years</li>
-                    <li>Level: Elementary+</li>
-                    <li>Activities: Comic Creation</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">4</div>
-                <h3>Fourth Grade Adventurers</h3>
-                <ul>
-                    <li>Age: 9-10 years</li>
-                    <li>Level: Pre-Intermediate</li>
-                    <li>Activities: Group Projects</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">5</div>
-                <h3>Fifth Grade Champions</h3>
-                <ul>
-                    <li>Age: 10-11 years</li>
-                    <li>Level: Intermediate</li>
-                    <li>Activities: Debates</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">6</div>
-                <h3>Sixth Grade Scholars</h3>
-                <ul>
-                    <li>Age: 11-12 years</li>
-                    <li>Level: Intermediate+</li>
-                    <li>Activities: News Analysis</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">7</div>
-                <h3>Seventh Grade Masters</h3>
-                <ul>
-                    <li>Age: 12-13 years</li>
-                    <li>Level: Upper-Intermediate</li>
-                    <li>Activities: Podcast Creation</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">8</div>
-                <h3>Eighth Grade Achievers</h3>
-                <ul>
-                    <li>Age: 13-14 years</li>
-                    <li>Level: Advanced</li>
-                    <li>Activities: TED Talks</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">9</div>
-                <h3>Ninth Grade Pioneers</h3>
-                <ul>
-                    <li>Age: 14-15 years</li>
-                    <li>Level: Advanced+</li>
-                    <li>Activities: Literature Circles</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">10</div>
-                <h3>Tenth Grade Innovators</h3>
-                <ul>
-                    <li>Age: 15-16 years</li>
-                    <li>Level: Proficiency</li>
-                    <li>Activities: Research Projects</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">11</div>
-                <h3>Eleventh Grade Leaders</h3>
-                <ul>
-                    <li>Age: 16-17 years</li>
-                    <li>Level: Proficiency+</li>
-                    <li>Activities: Model UN</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">12</div>
-                <h3>Twelfth Grade Graduates</h3>
-                <ul>
-                    <li>Age: 17-18 years</li>
-                    <li>Level: Mastery</li>
-                    <li>Activities: Thesis Writing</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <!-- Special Programs -->
-            <div class="grade-card">
-                <div class="grade-header">U</div>
-                <h3>University Prep</h3>
-                <ul>
-                    <li>Age: 18+ years</li>
-                    <li>Level: Academic</li>
-                    <li>Activities: Lecture Analysis</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">P</div>
-                <h3>Parent Program</h3>
-                <ul>
-                    <li>Age: Adult Learners</li>
-                    <li>Level: Custom</li>
-                    <li>Activities: Family Learning</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-
-            <div class="grade-card">
-                <div class="grade-header">S</div>
-                <h3>Senior Scholars</h3>
-                <ul>
-                    <li>Age: 65+ years</li>
-                    <li>Level: Leisure</li>
-                    <li>Activities: Cultural Exchange</li>
-                </ul>
-                <div class="decorative-ball"></div>
-            </div>
-        </div>
-    </main>
-
-    <script src="js/main.js"></script>
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
