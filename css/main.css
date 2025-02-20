@@ -87,15 +87,15 @@ header {
   color: var(--primary-pink);
 }
 
-/* Add some top margin for the main content so it doesn't hide behind the fixed header */
+/* Ensure the main content is pushed down below the fixed header */
 main {
-  main {
-  margin-top: 200px; /* Ensure this matches the actual header height */
+  margin-top: 220px; /* Adjust this value to match the total height of your header */
 }
 
+/* Hero Section */
 #hero {
-  height: calc(100vh - 200px); /* Adjust based on the new header height */
-  margin-top: 0; /* Remove extra top margin */
+  height: calc(100vh - 220px); /* Subtract the header height to make the hero section fit within the viewport */
+  margin-top: 0; /* Remove any extra top margin */
 }
 .left-panel {
   position: relative;
