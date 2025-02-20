@@ -89,7 +89,7 @@ header {
 
 /* Add some top margin for the main content so it doesn't hide behind the fixed header */
 main {
-  margin-top: 120px; /* Adjust depending on header height */
+  margin-top: 300px; /* Adjust depending on header height */
 }
 
 /* ========== Hero Section ========== */
