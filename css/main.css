@@ -27,7 +27,7 @@
 body {
   font-family: var(--font-main);
   color: var(--text-color);
-  background-color: var(--white-color); /* If you want entire page yellow, change this to var(--primary-yellow) */
+  background-color: var(--primary-yellow); /* If you want entire page yellow, change this to var(--primary-yellow) */
   line-height: 1.5;
 }
 
