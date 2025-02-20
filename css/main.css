@@ -1,19 +1,13 @@
 /* ========== Root Variables ========== */
 :root {
-  /* Pink (logo text) */
-  --primary-pink: #ff66cc; /* adjust as needed */
-
-  /* Bright Yellow (background accent) */
-  --primary-yellow: #f7EE00; /* used for header and highlights */
-
-  /* Teal/Blue for the globe or accent */
+  /* Colors */
+  --primary-pink: #ff66cc;
+  --primary-yellow: #f7ee00;
   --primary-teal: #00cccc;
-
-  /* Dark Text or White Text for contrast */
   --text-color: #333;
   --white-color: #fff;
 
-  /* Font Stacks */
+  /* Fonts */
   --font-main: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -29,9 +23,10 @@ body {
   color: var(--text-color);
   background-color: var(--primary-yellow);
   line-height: 1.5;
+  padding-top: 220px; /* Adjust based on header height */
 }
 
-/* ========== Header Structure ========== */
+/* ========== Header ========== */
 header {
   background: var(--primary-yellow);
   padding: 10px 20px;
@@ -54,7 +49,7 @@ header {
 }
 
 .globe-logo {
-  height: 200px; /* Adjust the size as needed */
+  height: 200px; /* Adjust as needed */
   width: auto;
 }
 
@@ -66,8 +61,6 @@ header {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
 }
 
 .header-nav ul li {
@@ -84,20 +77,17 @@ header {
   color: var(--primary-pink);
 }
 
-/* ========== Main Content ========== */
-main {
-  margin-top: 240px; /* Adjusted to match the total height of the header */
-}
-
+/* ========== Hero Section ========== */
 #hero {
-  height: calc(100vh - 240px); /* Adjusted based on the new header height */
-  margin-top: 0;
+  min-height: calc(100vh - 220px); /* Viewport height minus header height */
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-yellow);
+  padding: 2em 0;
 }
 
 .left-panel {
-  position: relative;
   width: 100%;
-  background-color: var(--primary-yellow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,7 +136,7 @@ footer {
   margin-top: 2em;
 }
 
-/* ========== Sub-Pages ========== */
+/* ========== Additional Styles ========== */
 .page-header {
   background-color: var(--primary-pink);
   color: var(--white-color);
@@ -225,7 +215,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* ========== Dark Mode (optional) ========== */
+/* ========== Dark Mode ========== */
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-yellow: #c9b458;
