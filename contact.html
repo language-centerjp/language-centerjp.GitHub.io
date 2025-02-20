@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - The Language Center</title>
-    <link rel="stylesheet" href="css/main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Language Center</title>
+  <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
+  <!-- Updated Header -->
+  <header>
+    <!-- Header Top: Logo Area -->
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+    </div>
+    <!-- Navigation Area -->
+    <nav class="header-nav">
       <ul>
         <li><a href="index.html">ホーム</a></li>
         <li><a href="courses.html">コース</a></li>
@@ -19,23 +26,30 @@
         <li><a href="locations.html">所在地</a></li>
         <li><a href="schedule.html">スケジュール＆料金</a></li>
         <li><a href="about.html">学校について</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="contact.html" class="active">お問い合わせ</a></li>
         <li><a href="blog.html">ブログ</a></li>
       </ul>
     </nav>
-    </header>
-    <section class="contact-info">
-        <p>Email: info@languagecenter.com</p>
-        <p>Phone: 090-1234-5678</p>
-    </section>
-    <section class="contact-form">
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+  </header>
+
+  <!-- Contact Information -->
+  <section class="contact-info">
+    <p>Email: info@languagecenter.com</p>
+    <p>Phone: 090-1234-5678</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form">
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
