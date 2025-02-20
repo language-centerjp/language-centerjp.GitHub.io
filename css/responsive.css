@@ -1,10 +1,22 @@
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
-  header nav ul {
+  /* Adjust navigation to stack vertically */
+  .header-nav ul {
     flex-direction: column;
     align-items: center;
   }
 
+  /* Adjust header top to remain centered */
+  .header-top {
+    padding-bottom: 5px;
+  }
+
+  /* Adjust main content margin */
+  main {
+    margin-top: 100px;
+  }
+
+  /* Adjust hero section for mobile */
   #hero {
     flex-direction: column;
     height: auto;
@@ -26,5 +38,12 @@
   .course-list {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* If using the flyer panel in a mobile layout, adjust its size */
+  .flyer-panel {
+    width: 100%;
+    height: 400px; /* Adjust as necessary for mobile */
+    background-size: cover;
   }
 }
