@@ -59,6 +59,8 @@ header {
 
 .header-nav {
   background: var(--primary-yellow);
+  position: relative;
+  z-index: 1001; /* Keep nav above logo */
 }
 
 .header-nav ul {
