@@ -8,7 +8,7 @@
   }
 
   .header-nav ul li {
-    width: 45%; /* Adjusts each item to take nearly half the width, forcing a second row */
+    flex-basis: 50%; /* Adjusts each item to take nearly half the width, forcing a second row */
     text-align: center; /* Centers text within each nav item */
   }
 
