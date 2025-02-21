@@ -9,6 +9,9 @@
 
   /* Fonts */
   --font-main: 'Helvetica Neue', Arial, sans-serif;
+
+  /* Layout */
+  --header-height: 240px; /* Updated from 260px */
 }
 
 /* ========== Global Resets & Body ========== */
@@ -26,7 +29,7 @@ body {
 }
 
 main {
-  padding-top: 280px; /* Add top padding to main content */
+  padding-top: var(--header-height);
 }
 
 /* ========== Header ========== */
@@ -35,7 +38,7 @@ header {
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  height: 260px; /* Add explicit height matching body padding */
+  height: var(--header-height);
   width: 100%;
   top: 0;
   left: 0;
@@ -53,30 +56,33 @@ header {
 }
 
 .globe-logo {
-  height: 200px; /* Adjust as needed */
+  height: 180px; /* Reduced from 200px */
   width: auto;
+  transition: height 0.3s ease;
 }
 
 .header-nav {
   background: var(--primary-yellow);
   position: relative;
-  z-index: 1001; /* Keep nav above logo */
+  z-index: 1001;
 }
 
 .header-nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 
 .header-nav ul li {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .header-nav ul li a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .header-nav ul li a.active {
@@ -85,11 +91,12 @@ header {
 
 /* ========== Hero Section ========== */
 #hero {
-  min-height: calc(100vh - 260px); /* Viewport height minus header height */
+  min-height: calc(100dvh - var(--header-height));
   display: flex;
   align-items: center;
   background-color: var(--primary-yellow);
-  padding: 2em 0;
+  padding: 2em 0 40px;
+  position: relative;
 }
 
 .left-panel {
@@ -100,12 +107,12 @@ header {
   align-items: flex-start;
   padding: 2em;
   position: relative;
-  z-index: 100; /* Ensure content stays above header */
+  z-index: 100;
 }
 
 .hero-text h1 {
   color: var(--primary-pink);
-  font-size: 2.2em;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   margin-bottom: 0.5em;
 }
 
@@ -121,6 +128,7 @@ header {
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
+  display: inline-block;
 }
 
 /* ========== Info Sections ========== */
@@ -144,84 +152,14 @@ footer {
   margin-top: 2em;
 }
 
-/* ========== Additional Styles ========== */
-.page-header {
-  background-color: var(--primary-pink);
-  color: var(--white-color);
-  padding: 2em;
-  text-align: center;
-}
-
-.course-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1em;
-}
-
-.course-item {
-  width: 250px;
-  margin: 1em;
-  background-color: #fafafa;
-  border: 1px solid #ccc;
-  padding: 1em;
-  border-radius: 4px;
-}
-
 /* ========== Flyer Panel ========== */
-.layout-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .flyer-panel {
   position: relative;
   width: 300px;
-  height: calc(100vh - 260px); /* Account for header */
-  margin-top: 260px; /* Push down below header */
+  height: calc(100dvh - var(--header-height));
+  margin-top: var(--header-height);
   background: url('../images/flyer-bg.png') no-repeat center/cover;
   flex-shrink: 0;
-}
-
-.jp-text-container {
-  position: absolute;
-  top: 350px;
-  left: 40px;
-  width: 260px;
-}
-
-.jp-title {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 1.8rem;
-  color: #003366;
-  transform: rotate(-20deg);
-  transform-origin: left center;
-  margin-bottom: 2rem;
-}
-
-.jp-subtitle,
-.jp-body,
-.jp-pricing {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: #003366;
-  transform: rotate(-20deg);
-  transform-origin: left center;
-  text-align: center;
-}
-
-.jp-subtitle {
-  font-size: 1rem;
-  margin-bottom: 3rem;
-}
-
-.jp-body {
-  font-size: 0.8rem;
-  margin-bottom: 3rem;
-}
-
-.jp-pricing {
-  font-size: 0.8rem;
-  margin-top: 2rem;
 }
 
 /* ========== Dark Mode ========== */
