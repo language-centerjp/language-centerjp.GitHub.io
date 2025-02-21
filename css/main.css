@@ -97,6 +97,8 @@ header {
   justify-content: center;
   align-items: flex-start;
   padding: 2em;
+  position: relative;
+  z-index: 100; /* Ensure content stays above header */
 }
 
 .hero-text h1 {
