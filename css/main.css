@@ -177,7 +177,8 @@ footer {
 .flyer-panel {
   position: relative;
   width: 300px;
-  height: 100vh;
+  height: calc(100vh - 260px); /* Account for header */
+  margin-top: 260px; /* Push down below header */
   background: url('../images/flyer-bg.png') no-repeat center/cover;
   flex-shrink: 0;
 }
