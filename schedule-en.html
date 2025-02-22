@@ -37,15 +37,13 @@
 
     <main>
         <section class="page-header">
-            <h1>Class Schedule</h1>
-            <p>Monthly class timetable and fee structure</p>
+            <h1>Schedule & Pricing</h1>
+            <p>Lesson schedules and fee structure</p>
         </section>
 
         <section class="schedule-content">
-            <div class="price-list">
-                <h2>Monthly Fees</h2>
-                <p>Group Lessons: ¥6,500/month</p>
-            </div>
+            <h2>Monthly Schedule</h2>
+            <p>Monday - Saturday: 10:00 - 21:00</p>
         </section>
     </main>
 
@@ -64,9 +62,8 @@
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          const newPage = currentPage.replace('schedule', 
-            newLang === 'ja' ? 'schedule' : 'schedule-en'
-          ) + '.html';
+          let newPage = currentPage.replace(/(-en)?\.html$/, '');
+          newPage += newLang === 'ja' ? '.html' : '-en.html';
           window.location.href = newPage;
         });
       });
