@@ -37,15 +37,13 @@
 
     <main>
         <section class="page-header">
-            <h1>所在地</h1>
-            <p>当校へのアクセス方法</p>
+            <h1>教室所在地</h1>
+            <p>当センターのアクセス情報と地図</p>
         </section>
 
         <section class="location-content">
-            <address>
-                埼玉県川口市○○-○○<br>
-                最寄駅: 川口駅より徒歩10分
-            </address>
+            <h2>メイン教室</h2>
+            <p>埼玉県川口市○○-○○</p>
         </section>
     </main>
 
@@ -60,7 +58,7 @@
         const languageSelect = document.getElementById('languageSelect');
         const currentPage = window.location.pathname.split('/').pop();
         
-        languageSelect.value = document.documentElement.lang;
+        languageSelect.value = document.documentElement.lang === 'en' ? 'en' : 'ja';
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
