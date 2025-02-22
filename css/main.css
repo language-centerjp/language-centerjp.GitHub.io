@@ -11,7 +11,7 @@
   --font-main: 'Helvetica Neue', Arial, sans-serif;
 
   /* Layout */
-  --header-height: 240px; /* Updated from 260px */
+  --header-height: 240px;
 }
 
 /* ========== Global Resets & Body ========== */
@@ -47,7 +47,8 @@ header {
 
 .header-top {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 10px;
 }
 
@@ -56,11 +57,36 @@ header {
 }
 
 .globe-logo {
-  height: 180px; /* Reduced from 200px */
+  height: 180px;
   width: auto;
   transition: height 0.3s ease;
 }
 
+/* ========== Language Switcher ========== */
+.language-switcher {
+  position: relative;
+  z-index: 1002;
+}
+
+.language-switcher select {
+  padding: 8px 12px;
+  border: 2px solid var(--primary-pink);
+  border-radius: 20px;
+  background-color: var(--white-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.language-switcher select:hover {
+  background-color: var(--primary-pink);
+  color: var(--white-color);
+}
+
+/* ========== Navigation ========== */
 .header-nav {
   background: var(--primary-yellow);
   position: relative;
@@ -150,16 +176,6 @@ footer {
   background-color: var(--primary-yellow);
   padding: 1em 0;
   margin-top: 2em;
-}
-
-/* ========== Flyer Panel ========== */
-.flyer-panel {
-  position: relative;
-  width: 300px;
-  height: calc(100dvh - var(--header-height));
-  margin-top: var(--header-height);
-  background: url('../images/flyer-bg.png') no-repeat center/cover;
-  flex-shrink: 0;
 }
 
 /* ========== Dark Mode ========== */
