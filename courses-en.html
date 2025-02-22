@@ -3,86 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - The Language Center</title>
+    <title>The Language Center | Courses</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="logo-container">
-                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
-            </div>
-            <div class="language-switcher">
-                <select id="languageSelect" aria-label="Select language">
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
-        </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="courses-en.html" class="active">Courses</a></li>
-                <li><a href="teachers-en.html">Teachers</a></li>
-                <li><a href="testimonials-en.html">Testimonials</a></li>
-                <li><a href="locations-en.html">Locations</a></li>
-                <li><a href="schedule-en.html">Schedule & Fees</a></li>
-                <li><a href="about-en.html">About Us</a></li>
-                <li><a href="contact-en.html">Contact</a></li>
-                <li><a href="blog-en.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <h1>Our Courses</h1>
-            <p>Comprehensive courses for all levels and purposes</p>
-        </section>
+<header>
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+    </div>
+    <div class="language-switcher">
+      <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+      </select>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li><a href="index-en.html">Home</a></li>
+      <li><a href="courses-en.html" class="active">Courses</a></li>
+      <li><a href="teachers-en.html">Teachers</a></li>
+      <li><a href="testimonials-en.html">Testimonials</a></li>
+      <li><a href="locations-en.html">Locations</a></li>
+      <li><a href="schedule-en.html">Schedule & Fees</a></li>
+      <li><a href="about-en.html">About Us</a></li>
+      <li><a href="contact-en.html">Contact</a></li>
+      <li><a href="blog-en.html">Blog</a></li>
+    </ul>
+  </nav>
+</header>
 
-        <section class="course-content">
-            <h2>Main Courses</h2>
-            <ul>
-                <li>Daily Conversation Course</li>
-                <li>Travel English Course</li>
-                <li>Business English Course</li>
-                <li>TOEIC Preparation Course</li>
-                <li>Children's English Course</li>
-            </ul>
-        </section>
-    </main>
+<main>
+    <section class="page-header">
+        <h1>Course Catalog</h1>
+        <p>Comprehensive English programs from daily conversation to business communication and exam preparation.</p>
+    </section>
 
-    <footer>
-        <p>© 2025 The Language Center. All Rights Reserved.</p>
-    </footer>
+    <section class="course-list">
+        <article class="course-item">
+            <h2>Everyday English</h2>
+            <p>Develop essential conversational skills for everyday situations.</p>
+            <p class="jp-text">For all levels from beginner to advanced.</p>
+        </article>
+        <article class="course-item">
+            <h2>Travel English</h2>
+            <p>Master key phrases and customs for smooth travel experiences.</p>
+            <p class="jp-text">Practical phrases for international travel.</p>
+        </article>
+        <article class="course-item">
+            <h2>Business English</h2>
+            <p>Enhance communication skills for meetings, emails, and presentations.</p>
+            <p class="jp-text">Specialized business scenario training.</p>
+        </article>
+        <article class="course-item">
+            <h2>Test Preparation</h2>
+            <p>Structured guidance to achieve high scores in TOEIC, TOEFL, and Eiken.</p>
+            <p class="jp-text">Targeted score improvement programs.</p>
+        </article>
+        <article class="course-item">
+            <h2>Pronunciation Training</h2>
+            <p>Improve pronunciation for clearer and more confident speech.</p>
+            <p class="jp-text">Accent reduction techniques.</p>
+        </article>
+        <article class="course-item">
+            <h2>Writing Skills</h2>
+            <p>Develop structured writing skills for essays, emails, and reports.</p>
+            <p class="jp-text">From basic to advanced composition.</p>
+        </article>
+    </section>
+</main>
 
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        languageSelect.value = document.documentElement.lang;
+<footer>
+    <p>© 2025 The Language Center. All Rights Reserved.</p>
+</footer>
 
-        languageSelect.addEventListener('change', function() {
-          const newLang = this.value;
-          let newPage = currentPage;
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const languageSelect = document.getElementById('languageSelect');
+    const currentPath = window.location.pathname.split('/').pop();
+    
+    // Set initial language
+    languageSelect.value = document.documentElement.lang;
 
-          if(newLang === 'ja') {
-            newPage = currentPage.replace('-en.html', '.html');
-          } else {
-            newPage = currentPage.replace('.html', '-en.html');
-          }
+    languageSelect.addEventListener('change', function() {
+        const newLang = this.value;
+        let newPage = currentPath;
 
-          if(currentPage === 'courses-en.html' || currentPage === 'courses.html') {
-            newPage = newLang === 'ja' ? 'courses.html' : 'courses-en.html';
-          }
+        if(newLang === 'ja') {
+            // Switch to Japanese version
+            if(currentPath === 'courses-en.html') {
+                newPage = 'courses.html';
+            } else {
+                newPage = currentPath.replace('-en.html', '.html');
+            }
+        } else {
+            // Switch to English version
+            newPage = currentPath.replace('.html', '-en.html');
+        }
 
-          window.location.href = newPage;
-        });
-      });
-    </script>
+        window.location.href = newPage;
+    });
+});
+</script>
 </body>
 </html>
