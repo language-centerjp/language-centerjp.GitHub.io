@@ -37,15 +37,13 @@
 
     <main>
         <section class="page-header">
-            <h1>レッスンスケジュール</h1>
-            <p>月ごとのクラススケジュールと料金体系</p>
+            <h1>スケジュール＆料金</h1>
+            <p>レッスンスケジュールと料金体系</p>
         </section>
 
         <section class="schedule-content">
-            <div class="price-list">
-                <h2>月額料金</h2>
-                <p>グループレッスン: 6,500円/月</p>
-            </div>
+            <h2>月間スケジュール</h2>
+            <p>毎週月曜日～土曜日: 10:00 - 21:00</p>
         </section>
     </main>
 
@@ -64,9 +62,8 @@
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          const newPage = currentPage.replace('schedule', 
-            newLang === 'en' ? 'schedule-en' : 'schedule'
-          ) + '.html';
+          let newPage = currentPage.replace(/(-\en)?\.html$/, '');
+          newPage += newLang === 'en' ? '-en.html' : '.html';
           window.location.href = newPage;
         });
       });
