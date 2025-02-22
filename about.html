@@ -68,21 +68,27 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const languageSelect = document.getElementById('languageSelect');
-        const currentPath = window.location.pathname;
+        const currentPage = window.location.pathname.split('/').pop();
         
+        // Set initial language selection
         languageSelect.value = document.documentElement.lang === 'en' ? 'en' : 'ja';
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          let newPath = currentPath.replace(/(\/about)?(-en)?\.html$/, '');
-          
-          if(newLang === 'en') {
-            newPath += (newPath.endsWith('/') ? 'about-en.html' : '-en.html');
+          let newPage = currentPage;
+
+          // Handle index page separately
+          if(currentPage === '' || currentPage === 'index.html' || currentPage === 'index-en.html') {
+            newPage = newLang === 'en' ? 'index-en.html' : 'index.html';
           } else {
-            newPath += (newPath.endsWith('/') ? 'about.html' : '.html');
+            if(newLang === 'en') {
+              newPage = currentPage.replace('.html', '-en.html');
+            } else {
+              newPage = currentPage.replace('-en.html', '.html');
+            }
           }
-          
-          window.location.href = newPath;
+
+          window.location.href = newPage;
         });
       });
     </script>
