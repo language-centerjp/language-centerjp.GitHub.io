@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
     <div class="header-top">
       <div class="logo-container">
@@ -17,59 +15,57 @@
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="Select language">
-          <option value="ja">日本語</option>
           <option value="en">English</option>
+          <option value="ja">日本語</option>
         </select>
       </div>
     </div>
     <nav class="header-nav">
       <ul>
-        <li><a href="index.html" class="active">ホーム</a></li>
-        <li><a href="courses.html">コース</a></li>
-        <li><a href="teachers.html">講師</a></li>
-        <li><a href="testimonials.html">受講者の声</a></li>
-        <li><a href="locations.html">所在地</a></li>
-        <li><a href="schedule.html">スケジュール＆料金</a></li>
-        <li><a href="about.html">学校について</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="index-en.html" class="active">Home</a></li>
+        <li><a href="courses-en.html">Courses</a></li>
+        <li><a href="teachers-en.html">Teachers</a></li>
+        <li><a href="testimonials-en.html">Testimonials</a></li>
+        <li><a href="locations-en.html">Locations</a></li>
+        <li><a href="schedule-en.html">Schedule & Fees</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="contact-en.html">Contact</a></li>
+        <li><a href="blog-en.html">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
   <section id="hero">
     <div class="left-panel">
       <div class="hero-text">
-        <h1>ランゲージセンターで英語をエンジョイ！</h1>
+        <h1>Enjoy English at The Language Center!</h1>
         <p>
-          フレンドリーで楽しい雰囲気の中、日常英会話、トラベル英語、
-          ビジネス英語、テスト対策など多彩なコースが充実！
+          Learn English in a friendly, fun environment with various courses including:
+          <br>
+          Daily Conversation, Business English, Travel English, and Exam Preparation.
           <br><br>
-          Enjoy English in a friendly, fun environment!
+          フレンドリーな環境で英語を楽しく学びましょう！
         </p>
-        <a class="cta-button" href="courses.html">コースを見る</a>
+        <a class="cta-button" href="courses-en.html">View Courses</a>
       </div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
   <main>
     <section class="info-section">
-      <h2> No Sign-Up Fee！</h2>
+      <h2>No Registration Fee!</h2>
       <p>
-        Private：10,000円 / 月4回<br>
-        Group：6,500円 / 月4回
+        Private Lessons: ¥10,000 / 4 sessions<br>
+        Group Lessons: ¥6,500 / 4 sessions
       </p>
       <p>
-        <strong>Address:</strong> 埼玉県川口市○○-○○<br>
+        <strong>Address:</strong> Kawaguchi City, Saitama<br>
         <strong>Phone:</strong> 090-1766-0693<br>
         <strong>Email:</strong> <a href="mailto:language.center@gmail.com">language.center@gmail.com</a>
       </p>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
@@ -79,22 +75,33 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const languageSelect = document.getElementById('languageSelect');
-      const currentPath = window.location.pathname;
+      const currentPage = window.location.pathname.split('/').pop();
       
       // Set initial language selection
-      languageSelect.value = document.documentElement.lang === 'en' ? 'en' : 'ja';
+      languageSelect.value = document.documentElement.lang;
 
       languageSelect.addEventListener('change', function() {
         const newLang = this.value;
-        let newPath = currentPath.replace(/(\/index)?(-en)?\.html$/, '');
-        
-        if(newLang === 'en') {
-          newPath += (newPath.endsWith('/') ? 'index-en.html' : '-en.html');
+        let newPage = currentPage;
+
+        if(newLang === 'ja') {
+          // Switch to Japanese version
+          if(currentPage.includes('-en')) {
+            newPage = currentPage.replace('-en.html', '.html');
+          }
         } else {
-          newPath += (newPath.endsWith('/') ? 'index.html' : '.html');
+          // Switch to English version
+          if(!currentPage.includes('-en')) {
+            newPage = currentPage.replace('.html', '-en.html');
+          }
         }
-        
-        window.location.href = newPath;
+
+        // Handle index page separately
+        if(currentPage === 'index-en.html' || currentPage === '') {
+          newPage = newLang === 'ja' ? 'index.html' : 'index-en.html';
+        }
+
+        window.location.href = newPage;
       });
     });
   </script>
