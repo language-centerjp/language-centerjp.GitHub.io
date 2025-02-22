@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations - The Language Center</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+            </div>
+            <div class="language-switcher">
+                <select id="languageSelect" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="courses-en.html">Courses</a></li>
+                <li><a href="teachers-en.html">Teachers</a></li>
+                <li><a href="testimonials-en.html">Testimonials</a></li>
+                <li><a href="locations-en.html" class="active">Locations</a></li>
+                <li><a href="schedule-en.html">Schedule & Fees</a></li>
+                <li><a href="about-en.html">About Us</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+                <li><a href="blog-en.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Location</h1>
+            <p>Find our central school location</p>
+        </section>
+
+        <section class="location-content">
+            <address>
+                1-2-3 Chuo, Kawaguchi City<br>
+                5-minute walk from East Exit of Kawaguchi Station
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 The Language Center. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const languageSelect = document.getElementById('languageSelect');
+        const currentPage = window.location.pathname.split('/').pop();
+        
+        languageSelect.value = document.documentElement.lang;
+
+        languageSelect.addEventListener('change', function() {
+          const newLang = this.value;
+          const newPage = currentPage.replace(/locations(-en)?\.html/, 
+            newLang === 'ja' ? 'locations.html' : 'locations-en.html'
+          );
+          window.location.href = newPage;
+        });
+      });
+    </script>
+</body>
+</html>
