@@ -38,13 +38,13 @@
     <main>
         <section class="page-header">
             <h1>Our Location</h1>
-            <p>Find our central school location</p>
+            <p>How to find our school</p>
         </section>
 
         <section class="location-content">
             <address>
-                1-2-3 Chuo, Kawaguchi City<br>
-                5-minute walk from East Exit of Kawaguchi Station
+                Kawaguchi City, Saitama<br>
+                10-minute walk from Kawaguchi Station
             </address>
         </section>
     </main>
@@ -64,9 +64,8 @@
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          const newPage = currentPage.replace(/locations(-en)?\.html/, 
-            newLang === 'ja' ? 'locations.html' : 'locations-en.html'
-          );
+          let newPage = currentPage.replace(/(-en)?\.html$/, '');
+          newPage += newLang === 'ja' ? '.html' : '-en.html';
           window.location.href = newPage;
         });
       });
