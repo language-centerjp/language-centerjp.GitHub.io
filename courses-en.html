@@ -1,55 +1,54 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コース一覧 - The Language Center</title>
+    <title>Courses - The Language Center</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- HEADER -->
-  <header>
-    <div class="header-top">
-      <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
-      </div>
-      <div class="language-switcher">
-        <select id="languageSelect" aria-label="Select language">
-          <option value="ja">日本語</option>
-          <option value="en">English</option>
-        </select>
-      </div>
-    </div>
-    <nav class="header-nav">
-      <ul>
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="courses.html" class="active">コース</a></li>
-        <li><a href="teachers.html">講師</a></li>
-        <li><a href="testimonials.html">受講者の声</a></li>
-        <li><a href="locations.html">所在地</a></li>
-        <li><a href="schedule.html">スケジュール＆料金</a></li>
-        <li><a href="about.html">学校について</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-        <li><a href="blog.html">ブログ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+            </div>
+            <div class="language-switcher">
+                <select id="languageSelect" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="courses-en.html" class="active">Courses</a></li>
+                <li><a href="teachers-en.html">Teachers</a></li>
+                <li><a href="testimonials-en.html">Testimonials</a></li>
+                <li><a href="locations-en.html">Locations</a></li>
+                <li><a href="schedule-en.html">Schedule & Fees</a></li>
+                <li><a href="about-en.html">About Us</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+                <li><a href="blog-en.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="page-header">
-            <h1>コース一覧</h1>
-            <p>初心者からビジネスレベルまで、目的に合わせた多彩なコースをご用意しています。</p>
+            <h1>Our Courses</h1>
+            <p>Comprehensive courses for all levels and purposes</p>
         </section>
 
         <section class="course-content">
-            <h2>主要コース</h2>
+            <h2>Main Courses</h2>
             <ul>
-                <li>日常英会話コース</li>
-                <li>トラベル英会話コース</li>
-                <li>Business</li>
-                <li>TOEIC対策コース</li>
-                <li>子ども向け英語コース</li>
+                <li>Daily Conversation Course</li>
+                <li>Travel English Course</li>
+                <li>Business English Course</li>
+                <li>TOEIC Preparation Course</li>
+                <li>Children's English Course</li>
             </ul>
         </section>
     </main>
@@ -63,21 +62,25 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const languageSelect = document.getElementById('languageSelect');
-        const currentPath = window.location.pathname;
+        const currentPage = window.location.pathname.split('/').pop();
         
-        languageSelect.value = document.documentElement.lang === 'en' ? 'en' : 'ja';
+        languageSelect.value = document.documentElement.lang;
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          let newPath = currentPath.replace(/(\/courses)?(-en)?\.html$/, '');
-          
-          if(newLang === 'en') {
-            newPath += (newPath.endsWith('/') ? 'courses-en.html' : '-en.html');
+          let newPage = currentPage;
+
+          if(newLang === 'ja') {
+            newPage = currentPage.replace('-en.html', '.html');
           } else {
-            newPath += (newPath.endsWith('/') ? 'courses.html' : '.html');
+            newPage = currentPage.replace('.html', '-en.html');
           }
-          
-          window.location.href = newPath;
+
+          if(currentPage === 'courses-en.html' || currentPage === 'courses.html') {
+            newPage = newLang === 'ja' ? 'courses.html' : 'courses-en.html';
+          }
+
+          window.location.href = newPage;
         });
       });
     </script>
