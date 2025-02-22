@@ -37,13 +37,13 @@
 
     <main>
         <section class="page-header">
-            <h1>英語学習ブログ</h1>
-            <p>役立つ英語学習のヒントや学校ニュース</p>
+            <h1>ランゲージセンター ブログ</h1>
+            <p>英語学習のヒントと最新情報</p>
         </section>
 
         <article class="blog-post">
             <h2>効果的な単語の覚え方</h2>
-            <p>毎日10単語を目標に...</p>
+            <p>毎日5つの新しい単語を覚えるコツを解説</p>
         </article>
     </main>
 
@@ -58,13 +58,12 @@
         const languageSelect = document.getElementById('languageSelect');
         const currentPage = window.location.pathname.split('/').pop();
         
-        languageSelect.value = document.documentElement.lang;
+        languageSelect.value = document.documentElement.lang === 'en' ? 'en' : 'ja';
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          const newPage = currentPage.replace(/(\/blog)(-en)?\.html/, 
-            newLang === 'en' ? '/blog-en.html' : '/blog.html'
-          );
+          let newPage = currentPage.replace(/(-en)?\.html$/, '');
+          newPage += newLang === 'en' ? '-en.html' : '.html';
           window.location.href = newPage;
         });
       });
