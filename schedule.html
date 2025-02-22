@@ -8,49 +8,44 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- HEADER -->
-  <header>
-    <!-- Logo Section -->
-    <div class="header-top">
-      <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
-      </div>
-    </div>
-    <!-- Navigation -->
-    <nav class="header-nav">
-      <ul>
-        <li><a href="index.html" class="active">ホーム</a></li>
-        <li><a href="courses.html">コース</a></li>
-        <li><a href="teachers.html">講師</a></li>
-        <li><a href="testimonials.html">受講者の声</a></li>
-        <li><a href="locations.html">所在地</a></li>
-        <li><a href="schedule.html">スケジュール＆料金</a></li>
-        <li><a href="about.html">学校について</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-        <li><a href="blog.html">ブログ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+            </div>
+            <div class="language-switcher">
+                <select id="languageSelect" aria-label="言語選択">
+                    <option value="ja">日本語</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="courses.html">コース</a></li>
+                <li><a href="teachers.html">講師</a></li>
+                <li><a href="testimonials.html">受講者の声</a></li>
+                <li><a href="locations.html">所在地</a></li>
+                <li><a href="schedule.html" class="active">スケジュール＆料金</a></li>
+                <li><a href="about.html">学校について</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="page-header">
-            <h1>スケジュール＆料金</h1>
-            <p>レッスンの時間割と料金プランをご確認ください。</p>
+            <h1>レッスンスケジュール</h1>
+            <p>月ごとのクラススケジュールと料金体系</p>
         </section>
 
-        <section class="schedule">
-            <h2>レッスンスケジュール</h2>
-            <ul>
-                <li>月曜日 - 金曜日: 10:00 AM - 8:00 PM</li>
-                <li>土曜日: 10:00 AM - 4:00 PM</li>
-                <li>日曜日: 休校</li>
-            </ul>
-        </section>
-
-        <section class="pricing">
-            <h2>料金プラン</h2>
-            <p>個人レッスン: 7,000円 / 月4回</p>
-            <p>グループレッスン: 6,500円 / 月4回</p>
+        <section class="schedule-content">
+            <div class="price-list">
+                <h2>月額料金</h2>
+                <p>グループレッスン: 6,500円/月</p>
+            </div>
         </section>
     </main>
 
@@ -60,5 +55,21 @@
 
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const languageSelect = document.getElementById('languageSelect');
+        const currentPage = window.location.pathname.split('/').pop();
+        
+        languageSelect.value = document.documentElement.lang;
+
+        languageSelect.addEventListener('change', function() {
+          const newLang = this.value;
+          const newPage = currentPage.replace('schedule', 
+            newLang === 'en' ? 'schedule-en' : 'schedule'
+          ) + '.html';
+          window.location.href = newPage;
+        });
+      });
+    </script>
 </body>
 </html>
