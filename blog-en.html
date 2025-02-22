@@ -37,13 +37,13 @@
 
     <main>
         <section class="page-header">
-            <h1>English Learning Blog</h1>
-            <p>Helpful tips and school news</p>
+            <h1>Language Center Blog</h1>
+            <p>English learning tips and updates</p>
         </section>
 
         <article class="blog-post">
             <h2>Effective Vocabulary Building</h2>
-            <p>Try learning 10 new words daily...</p>
+            <p>Tips for memorizing 5 new words daily</p>
         </article>
     </main>
 
@@ -62,9 +62,8 @@
 
         languageSelect.addEventListener('change', function() {
           const newLang = this.value;
-          const newPage = currentPage.replace(/(\/blog)(-en)?\.html/, 
-            newLang === 'ja' ? '/blog.html' : '/blog-en.html'
-          );
+          let newPage = currentPage.replace(/(-en)?\.html$/, '');
+          newPage += newLang === 'ja' ? '.html' : '-en.html';
           window.location.href = newPage;
         });
       });
