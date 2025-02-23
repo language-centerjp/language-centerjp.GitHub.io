@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locations - The Language Center</title>
+    <title>Our Locations - The Language Center</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -37,15 +37,19 @@
 
     <main>
         <section class="page-header">
-            <h1>Our Location</h1>
-            <p>How to find our school</p>
+            <h1>Our Locations</h1>
+            <p>Find our classrooms and access information</p>
         </section>
 
         <section class="location-content">
-            <address>
-                Kawaguchi City, Saitama<br>
-                10-minute walk from Kawaguchi Station
-            </address>
+            <div class="location-card">
+                <h2>Main Campus</h2>
+                <p>Kawaguchi City, Saitama Prefecture</p>
+                <div class="map-container">
+                    <!-- Add actual map embed code here -->
+                    <div class="map-placeholder">Map Preview</div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -56,19 +60,37 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        languageSelect.value = document.documentElement.lang;
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.getElementById('languageSelect');
+            const currentPage = window.location.pathname.split('/').pop();
+            
+            // Set initial language selection
+            languageSelect.value = document.documentElement.lang;
 
-        languageSelect.addEventListener('change', function() {
-          const newLang = this.value;
-          let newPage = currentPage.replace(/(-en)?\.html$/, '');
-          newPage += newLang === 'ja' ? '.html' : '-en.html';
-          window.location.href = newPage;
+            languageSelect.addEventListener('change', function() {
+                const newLang = this.value;
+                let newPage = currentPage;
+
+                if(newLang === 'ja') {
+                    // Switch to Japanese version
+                    if(currentPage === 'locations-en.html') {
+                        newPage = 'locations.html';
+                    } else {
+                        newPage = currentPage.replace('-en.html', '.html');
+                    }
+                } else {
+                    // Switch to English version
+                    newPage = currentPage.replace('.html', '-en.html');
+                }
+
+                // Handle index page separately
+                if(currentPage === 'index.html' || currentPage === 'index-en.html') {
+                    newPage = newLang === 'ja' ? 'index.html' : 'index-en.html';
+                }
+
+                window.location.href = newPage;
+            });
         });
-      });
     </script>
 </body>
 </html>
