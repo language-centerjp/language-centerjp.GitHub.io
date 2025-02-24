@@ -1,93 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - The Language Center</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>The Language Center | Home</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="logo-container">
-                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
-            </div>
-            <div class="language-switcher">
-                <select id="languageSelect" aria-label="Select language">
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
-        </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="courses-en.html">Courses</a></li>
-                <li><a href="teachers-en.html">Teachers</a></li>
-                <li><a href="testimonials-en.html">Testimonials</a></li>
-                <li><a href="locations-en.html">Locations</a></li>
-                <li><a href="schedule-en.html">Schedule & Fees</a></li>
-                <li><a href="about-en.html" class="active">About Us</a></li>
-                <li><a href="contact-en.html">Contact</a></li>
-                <li><a href="blog-en.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index-en.html" class="active">Home</a></li>
+        <li><a href="courses-en.html">Courses</a></li>
+        <li><a href="teachers-en.html">Teachers</a></li>
+        <li><a href="testimonials-en.html">Testimonials</a></li>
+        <li><a href="locations-en.html">Locations</a></li>
+        <li><a href="schedule-en.html">Schedule & Fees</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="contact-en.html">Contact</a></li>
+        <li><a href="blog-en.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="page-header">
-            <h1>About Our School</h1>
-            <p>Learn about our mission and educational philosophy</p>
-        </section>
+  <section id="hero">
+    <div class="left-panel">
+      <div class="hero-text">
+        <h1>Enjoy English at The Language Center!</h1>
+        <p>
+          Learn English in a friendly, fun environment with various courses including:
+          <br>
+          Daily Conversation, Business English, Travel English, and Exam Preparation.
+          <br><br>
+          フレンドリーな環境で英語を楽しく学びましょう！
+        </p>
+        <a class="cta-button" href="courses-en.html">View Courses</a>
+      </div>
+    </div>
+  </section>
 
-        <section class="about-content">
-            <h2>Our Mission</h2>
-            <p>Our goal is to provide an environment where all students can enjoy learning English effectively.</p>
+  <main>
+    <section class="info-section">
+      <h2>No Registration Fee!</h2>
+      <p>
+        Private Lessons: ¥10,000 / 4 sessions<br>
+        Group Lessons: ¥6,500 / 4 sessions
+      </p>
+      <p>
+        <strong>Address:</strong> Kawaguchi City, Saitama<br>
+        <strong>Phone:</strong> 090-1766-0693<br>
+        <strong>Email:</strong> <a href="mailto:language.center@gmail.com">language.center@gmail.com</a>
+      </p>
+    </section>
+  </main>
 
-            <h2>Key Features</h2>
-            <ul>
-                <li>Instruction by experienced native teachers</li>
-                <li>Practical conversation-focused curriculum</li>
-                <li>Classes for all levels from beginners to advanced</li>
-                <li>Fun lessons in a relaxed environment</li>
-            </ul>
+  <footer>
+    <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
+  </footer>
 
-            <h2>Our History</h2>
-            <p>The Language Center was established to help more people speak English and connect with the world.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 The Language Center. All Rights Reserved.</p>
-    </footer>
-
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        languageSelect.value = document.documentElement.lang;
-
-        languageSelect.addEventListener('change', function() {
-          const newLang = this.value;
-          let newPage = currentPage;
-
-          if(newLang === 'ja') {
-            newPage = currentPage.replace('-en.html', '.html');
-          } else {
-            newPage = currentPage.replace('.html', '-en.html');
-          }
-
-          if(currentPage === 'about-en.html' || currentPage === 'about.html') {
-            newPage = newLang === 'ja' ? 'about.html' : 'about-en.html';
-          }
-
-          window.location.href = newPage;
-        });
-      });
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
