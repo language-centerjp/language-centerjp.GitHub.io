@@ -1,4 +1,4 @@
-/* ========== Mobile First Approach ========== */
+/* ========== Mobile First Media Queries ========== */
 @supports (padding: max(0px)) {
   body,
   header,
@@ -8,89 +8,100 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .header-nav ul {
+    gap: 6px;
+  }
+  
+  .header-nav ul li a {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 992px) {
   :root {
-    --header-height: 200px;
+    --header-height: clamp(120px, 15vw, 160px);
   }
 
-  .globe-logo {
-    height: 150px;
+  .header-nav ul {
+    font-size: 0.9em;
+    gap: 4px;
+  }
+
+  .hero-text h1 {
+    margin-bottom: 0.6em;
   }
 }
 
 @media (max-width: 768px) {
-  :root {
-    --header-height: 180px;
-  }
-
-  .globe-logo {
-    height: 120px;
-  }
-
   .header-nav ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    font-size: 0.85em;
   }
 
   .header-nav ul li {
-    width: 100%;
-    margin: 0;
-    padding: 4px;
     text-align: center;
   }
 
-  #hero {
-    min-height: calc(100svh - var(--header-height));
-    padding: 1em 0;
+  .header-nav ul li a {
+    display: block;
+    white-space: normal;
+    padding: 8px 4px;
   }
 
-  .left-panel {
-    padding: 1em;
-  }
-
-  .language-switcher select {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+  .header-nav ul li a.active::after {
+    bottom: -2px;
   }
 }
 
-@media (max-width: 667px) and (orientation: landscape) {
+@media (max-width: 576px) {
   :root {
-    --header-height: 140px;
-  }
-
-  .globe-logo {
-    height: 80px;
-  }
-
-  .header-nav ul {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --header-height: 160px;
+    --header-height: clamp(100px, 12vw, 140px);
   }
 
   .header-top {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
-  .language-switcher {
-    width: 100%;
+  .logo-container {
+    flex: 0 1 auto;
     text-align: center;
   }
 
   .header-nav ul {
     grid-template-columns: repeat(2, 1fr);
+    font-size: 0.8em;
   }
 
-  .hero-text h1 {
-    font-size: 1.6rem;
+  .left-panel {
+    padding-top: 1em;
+  }
+
+  .hero-text p {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-nav ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  :root {
+    --header-height: 100px;
+  }
+
+  .globe-logo {
+    height: 70px;
+  }
+
+  .header-nav ul {
+    padding: 5px 0;
   }
 }
