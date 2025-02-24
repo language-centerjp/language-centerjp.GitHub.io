@@ -1,72 +1,90 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スケジュール＆料金 - The Language Center</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>スケジュール＆料金 - The Language Center</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="logo-container">
-                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
-            </div>
-            <div class="language-switcher">
-                <select id="languageSelect" aria-label="言語選択">
-                    <option value="ja">日本語</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
-        </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="courses.html">コース</a></li>
-                <li><a href="teachers.html">講師</a></li>
-                <li><a href="testimonials.html">受講者の声</a></li>
-                <li><a href="locations.html">所在地</a></li>
-                <li><a href="schedule.html" class="active">スケジュール＆料金</a></li>
-                <li><a href="about.html">学校について</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-                <li><a href="blog.html">ブログ</a></li>
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="言語選択">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="courses.html">コース</a></li>
+        <li><a href="teachers.html">講師</a></li>
+        <li><a href="testimonials.html">受講者の声</a></li>
+        <li><a href="locations.html">所在地</a></li>
+        <li><a href="schedule.html" class="active">スケジュール＆料金</a></li>
+        <li><a href="about.html">学校について</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-wrap">
+      <section class="page-header">
+        <h1>スケジュール＆料金</h1>
+        <p>柔軟な学習プランで英語を学びましょう</p>
+      </section>
+
+      <section class="info-section price-grid">
+        <article class="price-card">
+          <div class="card-content">
+            <h2>グループレッスン</h2>
+            <p class="price">6,500円<span>/月</span></p>
+            <ul class="feature-list">
+              <li>月4回レッスン</li>
+              <li>最大6名</li>
+              <li>全レベル対応</li>
             </ul>
-        </nav>
-    </header>
+          </div>
+        </article>
 
-    <main>
-        <section class="page-header">
-            <h1>スケジュール＆料金</h1>
-            <p>レッスンスケジュールと料金体系</p>
-        </section>
+        <article class="price-card highlight">
+          <div class="card-content">
+            <h2>個人レッスン</h2>
+            <p class="price">10,000円<span>/月</span></p>
+            <ul class="feature-list">
+              <li>月4回レッスン</li>
+              <li>カスタマイズカリキュラム</li>
+              <li>柔軟なスケジュール</li>
+            </ul>
+          </div>
+        </article>
 
-        <section class="schedule-content">
-            <h2>月間スケジュール</h2>
-            <p>毎週月曜日～土曜日: 10:00 - 21:00</p>
-        </section>
-    </main>
+        <article class="schedule-card">
+          <div class="card-content">
+            <h2>受付時間</h2>
+            <ul class="schedule-list">
+              <li>月～金: 10:00 - 21:00</li>
+              <li>土曜日: 10:00 - 18:00</li>
+              <li>日曜日: 休校</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2025 The Language Center. All Rights Reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 The Language Center. All Rights Reserved.</p>
+  </footer>
 
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        languageSelect.value = document.documentElement.lang;
-
-        languageSelect.addEventListener('change', function() {
-          const newLang = this.value;
-          let newPage = currentPage.replace(/(-\en)?\.html$/, '');
-          newPage += newLang === 'en' ? '-en.html' : '.html';
-          window.location.href = newPage;
-        });
-      });
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
