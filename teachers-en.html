@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Teachers - The Language Center</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Our Teachers - The Language Center</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="logo-container">
-                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="courses-en.html">Courses</a></li>
+        <li><a href="teachers-en.html" class="active">Teachers</a></li>
+        <li><a href="testimonials-en.html">Testimonials</a></li>
+        <li><a href="locations-en.html">Locations</a></li>
+        <li><a href="schedule-en.html">Schedule & Fees</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="contact-en.html">Contact</a></li>
+        <li><a href="blog-en.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-wrap">
+      <section class="page-header">
+        <h1>Meet Our Teachers</h1>
+        <p>Qualified native instructors with real-world experience</p>
+      </section>
+
+      <section class="grid-container teacher-grid">
+        <article class="card teacher-profile">
+          <div class="profile-image">
+            <img src="images/teacher-john.jpg" alt="John Smith" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h2>John Smith</h2>
+            <p class="qualification">MA in TESOL, 10+ years experience</p>
+            <div class="teacher-details">
+              <p>Specializes in business English and test preparation</p>
+              <ul class="teacher-skills">
+                <li>TOEIC/TOEFL expert</li>
+                <li>Corporate training</li>
+                <li>Pronunciation coaching</li>
+              </ul>
             </div>
-            <div class="language-switcher">
-                <select id="languageSelect" aria-label="Select language">
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                </select>
+          </div>
+        </article>
+
+        <article class="card teacher-profile">
+          <div class="profile-image">
+            <img src="images/teacher-sarah.jpg" alt="Sarah Johnson" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h2>Sarah Johnson</h2>
+            <p class="qualification">Cambridge CELTA, 8 years experience</p>
+            <div class="teacher-details">
+              <p>Focuses on conversational English and cultural studies</p>
+              <ul class="teacher-skills">
+                <li>Daily conversation</li>
+                <li>Travel English</li>
+                <li>Idiomatic expressions</li>
+              </ul>
             </div>
-        </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="courses-en.html">Courses</a></li>
-                <li><a href="teachers-en.html" class="active">Teachers</a></li>
-                <li><a href="testimonials-en.html">Testimonials</a></li>
-                <li><a href="locations-en.html">Locations</a></li>
-                <li><a href="schedule-en.html">Schedule & Fees</a></li>
-                <li><a href="about-en.html">About Us</a></li>
-                <li><a href="contact-en.html">Contact</a></li>
-                <li><a href="blog-en.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
 
-    <main>
-        <section class="page-header">
-            <h1>Our Teachers</h1>
-            <p>Meet our team of experienced native instructors</p>
-        </section>
+  <footer>
+    <p>© 2025 The Language Center. All Rights Reserved.</p>
+  </footer>
 
-        <section class="teacher-content">
-            <div class="teacher-profile">
-                <h2>John Smith</h2>
-                <p>American instructor with 10 years teaching experience</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 The Language Center. All Rights Reserved.</p>
-    </footer>
-
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        languageSelect.value = document.documentElement.lang;
-
-        languageSelect.addEventListener('change', function() {
-          const newLang = this.value;
-          let newPage = currentPage.replace('-en.html', '.html').replace('.html', '-en.html');
-          
-          if(newLang === 'ja') {
-            newPage = currentPage.includes('teachers') ? 'teachers.html' : newPage;
-          } else {
-            newPage = currentPage.includes('teachers') ? 'teachers-en.html' : newPage;
-          }
-          
-          window.location.href = newPage;
-        });
-      });
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
