@@ -1,84 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - The Language Center</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact Us - The Language Center</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="logo-container">
-                <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
-            </div>
-            <div class="language-switcher">
-                <select id="languageSelect" aria-label="Select language">
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="courses-en.html">Courses</a></li>
+        <li><a href="teachers-en.html">Teachers</a></li>
+        <li><a href="testimonials-en.html">Testimonials</a></li>
+        <li><a href="locations-en.html">Locations</a></li>
+        <li><a href="schedule-en.html">Schedule & Fees</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="contact-en.html" class="active">Contact</a></li>
+        <li><a href="blog-en.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-wrap">
+      <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team for any inquiries</p>
+      </section>
+
+      <section class="info-section contact-info">
+        <div class="text-block">
+          <h2>Contact Details</h2>
+          <ul class="contact-list">
+            <li>
+              <strong>Phone:</strong>
+              <a href="tel:090-1766-0693">090-1766-0693</a>
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:language.center@gmail.com">language.center@gmail.com</a>
+            </li>
+            <li>
+              <strong>Office Hours:</strong>
+              Mon-Fri 10:00 - 20:00
+            </li>
+          </ul>
         </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="courses-en.html">Courses</a></li>
-                <li><a href="teachers-en.html">Teachers</a></li>
-                <li><a href="testimonials-en.html">Testimonials</a></li>
-                <li><a href="locations-en.html">Locations</a></li>
-                <li><a href="schedule-en.html">Schedule & Fees</a></li>
-                <li><a href="about-en.html">About Us</a></li>
-                <li><a href="contact-en.html" class="active">Contact</a></li>
-                <li><a href="blog-en.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+      </section>
+    </section>
+  </main>
 
-    <main>
-        <section class="page-header">
-            <h1>Contact Us</h1>
-            <p>Feel free to contact us with any questions or inquiries</p>
-        </section>
+  <footer>
+    <p>© 2025 The Language Center. All Rights Reserved.</p>
+  </footer>
 
-        <section class="contact-content">
-            <h2>Contact Information</h2>
-            <p>Phone: 090-1766-0693</p>
-            <p>Email: language.center@gmail.com</p>
-            <p>Office Hours: Mon-Fri 10:00 - 20:00</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 The Language Center. All Rights Reserved.</p>
-    </footer>
-
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const currentPage = window.location.pathname.split('/').pop();
-        
-        languageSelect.value = document.documentElement.lang;
-
-        languageSelect.addEventListener('change', function() {
-          const newLang = this.value;
-          let newPage = currentPage;
-
-          if(newLang === 'ja') {
-            newPage = currentPage.replace('-en.html', '.html');
-          } else {
-            newPage = currentPage.replace('.html', '-en.html');
-          }
-
-          if(currentPage === 'contact-en.html' || currentPage === 'contact.html') {
-            newPage = newLang === 'ja' ? 'contact.html' : 'contact-en.html';
-          }
-
-          window.location.href = newPage;
-        });
-      });
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
