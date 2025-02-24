@@ -1,114 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Language Center | Courses</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Courses - The Language Center</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
-<header>
-  <div class="header-top">
-    <div class="logo-container">
-      <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+      </div>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
     </div>
-    <div class="language-switcher">
-      <select id="languageSelect" aria-label="Select language">
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-      </select>
-    </div>
-  </div>
-  <nav class="header-nav">
-    <ul>
-      <li><a href="index-en.html">Home</a></li>
-      <li><a href="courses-en.html" class="active">Courses</a></li>
-      <li><a href="teachers-en.html">Teachers</a></li>
-      <li><a href="testimonials-en.html">Testimonials</a></li>
-      <li><a href="locations-en.html">Locations</a></li>
-      <li><a href="schedule-en.html">Schedule & Fees</a></li>
-      <li><a href="about-en.html">About Us</a></li>
-      <li><a href="contact-en.html">Contact</a></li>
-      <li><a href="blog-en.html">Blog</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="courses-en.html" class="active">Courses</a></li>
+        <li><a href="teachers-en.html">Teachers</a></li>
+        <li><a href="testimonials-en.html">Testimonials</a></li>
+        <li><a href="locations-en.html">Locations</a></li>
+        <li><a href="schedule-en.html">Schedule & Fees</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="contact-en.html">Contact</a></li>
+        <li><a href="blog-en.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-    <section class="page-header">
+  <main>
+    <section class="content-wrap">
+      <section class="page-header">
         <h1>Course Catalog</h1>
-        <p>Comprehensive English programs from daily conversation to business communication and exam preparation.</p>
-    </section>
+        <p>Comprehensive English programs tailored to your needs</p>
+      </section>
 
-    <section class="course-list">
-        <article class="course-item">
-            <h2>Everyday English</h2>
-            <p>Develop essential conversational skills for everyday situations.</p>
-            <p class="jp-text">For all levels from beginner to advanced.</p>
+      <section class="grid-container course-list">
+        <article class="card course-item">
+          <h2>Everyday English</h2>
+          <div class="card-content">
+            <p>Develop essential conversational skills for daily life</p>
+            <p class="jp-text">Beginner to advanced levels</p>
+          </div>
         </article>
-        <article class="course-item">
-            <h2>Travel English</h2>
-            <p>Master key phrases and customs for smooth travel experiences.</p>
-            <p class="jp-text">Practical phrases for international travel.</p>
-        </article>
-        <article class="course-item">
-            <h2>Business English</h2>
-            <p>Enhance communication skills for meetings, emails, and presentations.</p>
-            <p class="jp-text">Specialized business scenario training.</p>
-        </article>
-        <article class="course-item">
-            <h2>Test Preparation</h2>
-            <p>Structured guidance to achieve high scores in TOEIC, TOEFL, and Eiken.</p>
-            <p class="jp-text">Targeted score improvement programs.</p>
-        </article>
-        <article class="course-item">
-            <h2>Pronunciation Training</h2>
-            <p>Improve pronunciation for clearer and more confident speech.</p>
-            <p class="jp-text">Accent reduction techniques.</p>
-        </article>
-        <article class="course-item">
-            <h2>Writing Skills</h2>
-            <p>Develop structured writing skills for essays, emails, and reports.</p>
-            <p class="jp-text">From basic to advanced composition.</p>
-        </article>
-    </section>
-</main>
 
-<footer>
+        <article class="card course-item">
+          <h2>Travel English</h2>
+          <div class="card-content">
+            <p>Master key phrases for international travel</p>
+            <p class="jp-text">Practical travel scenarios</p>
+          </div>
+        </article>
+
+        <article class="card course-item">
+          <h2>Business English</h2>
+          <div class="card-content">
+            <p>Professional communication skills development</p>
+            <p class="jp-text">Meetings & presentations</p>
+          </div>
+        </article>
+
+        <article class="card course-item">
+          <h2>Test Preparation</h2>
+          <div class="card-content">
+            <p>TOEIC/TOEFL/Eiken score improvement strategies</p>
+            <p class="jp-text">Targeted practice tests</p>
+          </div>
+        </article>
+
+        <article class="card course-item">
+          <h2>Pronunciation Training</h2>
+          <div class="card-content">
+            <p>Accent reduction and clarity improvement</p>
+            <p class="jp-text">Phonetic exercises</p>
+          </div>
+        </article>
+
+        <article class="card course-item">
+          <h2>Writing Skills</h2>
+          <div class="card-content">
+            <p>Academic and professional writing mastery</p>
+            <p class="jp-text">Structured composition</p>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer>
     <p>© 2025 The Language Center. All Rights Reserved.</p>
-</footer>
+  </footer>
 
-<script src="js/vendor.js"></script>
-<script src="js/main.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const languageSelect = document.getElementById('languageSelect');
-    const currentPath = window.location.pathname.split('/').pop();
-    
-    // Set initial language
-    languageSelect.value = document.documentElement.lang;
-
-    languageSelect.addEventListener('change', function() {
-        const newLang = this.value;
-        let newPage = currentPath;
-
-        if(newLang === 'ja') {
-            // Switch to Japanese version
-            if(currentPath === 'courses-en.html') {
-                newPage = 'courses.html';
-            } else {
-                newPage = currentPath.replace('-en.html', '.html');
-            }
-        } else {
-            // Switch to English version
-            newPage = currentPath.replace('.html', '-en.html');
-        }
-
-        window.location.href = newPage;
-    });
-});
-</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
