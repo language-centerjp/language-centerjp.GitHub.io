@@ -9,9 +9,10 @@
 </head>
 <body>
   <header>
+    <!-- 共通ヘッダー構造 -->
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+        <img src="images/globe-logo.png" alt="ランゲージセンターロゴ" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="言語選択">
@@ -35,15 +36,15 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
         <h1>教室所在地</h1>
-        <p>埼玉県川口市にある当センターのアクセス情報</p>
+        <p>当センターのアクセス情報</p>
       </section>
 
-      <section class="info-section location-grid">
-        <article class="location-card">
+      <section class="grid-container location-grid">
+        <article class="card location-info">
           <div class="card-content">
             <h2>メイン教室</h2>
             <address>
@@ -51,21 +52,21 @@
               埼玉県川口市本町1-1-1<br>
               川口駅東口より徒歩5分
             </address>
-            <div class="map-container" aria-label="地図">
-              <div class="map-placeholder" role="img" aria-label="地図プレースホルダー">
+            <div class="map-container">
+              <div class="map-placeholder" aria-label="地図">
                 <p>地図読み込み中...</p>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="location-card">
+        <article class="card transport-info">
           <div class="card-content">
-            <h2>アクセス情報</h2>
+            <h2>アクセス方法</h2>
             <ul class="transport-list">
-              <li>🚇 川口駅東口から徒歩5分</li>
-              <li>🚌 バス停: 川口市役所前</li>
-              <li>🅿️ 駐車場あり</li>
+              <li>🚇 JR京浜東北線 川口駅東口より徒歩5分</li>
+              <li>🚌 バス停「市役所前」より徒歩3分</li>
+              <li>🅿️ 専用駐車場2台分あり</li>
             </ul>
           </div>
         </article>
