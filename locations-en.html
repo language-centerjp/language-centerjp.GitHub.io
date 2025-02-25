@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Our Locations - The Language Center</title>
+  <title>Locations - The Language Center</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <header>
+    <!-- Shared header structure -->
     <div class="header-top">
       <div class="logo-container">
         <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
@@ -35,38 +36,37 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
         <h1>Our Locations</h1>
-        <p>Conveniently located classrooms in Saitama</p>
+        <p>Find our classrooms and access information</p>
       </section>
 
-      <section class="info-section location-grid">
-        <article class="location-card">
+      <section class="grid-container location-grid">
+        <article class="card location-info">
           <div class="card-content">
             <h2>Main Campus</h2>
             <address>
-              Kawaguchi City<br>
-              Saitama Prefecture<br>
-              〒332-0012
+              1-1-1 Honcho, Kawaguchi City<br>
+              Saitama Prefecture 332-0012<br>
+              5-minute walk from Kawaguchi Station East Exit
             </address>
-            <div class="map-container" aria-label="Location map">
-              <!-- Add map embed here -->
-              <div class="map-placeholder" role="img" aria-label="Map placeholder">
+            <div class="map-container">
+              <div class="map-placeholder" aria-label="Map">
                 <p>Map loading...</p>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="location-card">
+        <article class="card transport-info">
           <div class="card-content">
-            <h2>Access Information</h2>
+            <h2>Transportation</h2>
             <ul class="transport-list">
-              <li>🚇 5min walk from Kawaguchi Station (East Exit)</li>
-              <li>🚌 Bus Stop: Kawaguchi City Office</li>
-              <li>🅿️ Parking available</li>
+              <li>🚇 5min walk from Kawaguchi Station (JR Keihin-Tohoku Line)</li>
+              <li>🚌 3min walk from "City Hall" bus stop</li>
+              <li>🅿️ Dedicated parking for 2 cars</li>
             </ul>
           </div>
         </article>
