@@ -102,7 +102,7 @@ header {
   align-items: center;
   position: relative;
   z-index: 1;
-  margin-top: var(--header-height);
+  margin-top: var(--header-height) + 50px);
 }
 
 .left-panel {
