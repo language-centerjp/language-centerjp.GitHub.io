@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>The Language Center | Home</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -51,7 +51,7 @@
     </div>
   </section>
 
-  <main>
+  <main class="main-content">
     <section class="info-section">
       <h2>No Registration Fee!</h2>
       <p>
@@ -70,40 +70,6 @@
     <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
 
-  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const languageSelect = document.getElementById('languageSelect');
-      const currentPage = window.location.pathname.split('/').pop();
-      
-      // Set initial language selection
-      languageSelect.value = document.documentElement.lang;
-
-      languageSelect.addEventListener('change', function() {
-        const newLang = this.value;
-        let newPage = currentPage;
-
-        if(newLang === 'ja') {
-          // Switch to Japanese version
-          if(currentPage.includes('-en')) {
-            newPage = currentPage.replace('-en.html', '.html');
-          }
-        } else {
-          // Switch to English version
-          if(!currentPage.includes('-en')) {
-            newPage = currentPage.replace('.html', '-en.html');
-          }
-        }
-
-        // Handle index page separately
-        if(currentPage === 'index-en.html' || currentPage === '') {
-          newPage = newLang === 'ja' ? 'index.html' : 'index-en.html';
-        }
-
-        window.location.href = newPage;
-      });
-    });
-  </script>
 </body>
 </html>
