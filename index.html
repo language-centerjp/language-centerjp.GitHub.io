@@ -11,7 +11,7 @@
   <header>
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+        <img src="images/globe-logo.png" alt="ランゲージセンターロゴ" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="言語選択">
@@ -50,7 +50,7 @@
     </div>
   </section>
 
-  <main>
+  <main class="main-content">
     <section class="info-section">
       <h2>入会金 無料！</h2>
       <p>
@@ -70,40 +70,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    // Viewport height fix for mobile
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    
-    window.addEventListener('resize', () => {
-      vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-
-    // Language switcher
-    document.addEventListener('DOMContentLoaded', function() {
-      const languageSelect = document.getElementById('languageSelect');
-      const currentPage = window.location.pathname.split('/').pop();
-      
-      languageSelect.value = document.documentElement.lang;
-
-      languageSelect.addEventListener('change', function() {
-        const newLang = this.value;
-        let newPage = currentPage;
-
-        if(newLang === 'en') {
-          newPage = currentPage.includes('-en') ? currentPage : currentPage.replace('.html', '-en.html');
-        } else {
-          newPage = currentPage.replace('-en.html', '.html');
-        }
-
-        if(currentPage === '' || currentPage === 'index.html') {
-          newPage = newLang === 'en' ? 'index-en.html' : 'index.html';
-        }
-
-        window.location.href = newPage;
-      });
-    });
-  </script>
 </body>
 </html>
