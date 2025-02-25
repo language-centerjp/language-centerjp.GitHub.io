@@ -5,7 +5,7 @@
   --primary-teal: #00cccc;
   --text-color: #333;
   --white-color: #fff;
-  --header-height: clamp(140px, 18vw, 240px);
+  --header-height: clamp(10px, 10vw, 240px);
   --vh: 1vh;
   --font-main: 'Helvetica Neue', Arial, sans-serif;
 }
