@@ -35,31 +35,32 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
         <h1>Contact Us</h1>
-        <p>Get in touch with our team for any inquiries</p>
+        <p>Get in touch with our team</p>
       </section>
 
-      <section class="info-section contact-info">
-        <div class="text-block">
-          <h2>Contact Details</h2>
-          <ul class="contact-list">
-            <li>
-              <strong>Phone:</strong>
-              <a href="tel:090-1766-0693">090-1766-0693</a>
-            </li>
-            <li>
-              <strong>Email:</strong>
-              <a href="mailto:language.center@gmail.com">language.center@gmail.com</a>
-            </li>
-            <li>
-              <strong>Office Hours:</strong>
-              Mon-Fri 10:00 - 20:00
-            </li>
-          </ul>
-        </div>
+      <section class="info-section contact-form">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
       </section>
     </section>
   </main>
