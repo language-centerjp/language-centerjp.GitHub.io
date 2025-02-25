@@ -9,9 +9,10 @@
 </head>
 <body>
   <header>
+    <!-- 共通ヘッダー構造 -->
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+        <img src="images/globe-logo.png" alt="ランゲージセンターロゴ" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="言語選択">
@@ -35,15 +36,15 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
         <h1>スケジュール＆料金</h1>
-        <p>柔軟な学習プランで英語を学びましょう</p>
+        <p>レッスンスケジュールと料金体系</p>
       </section>
 
-      <section class="info-section price-grid">
-        <article class="price-card">
+      <section class="grid-container schedule-grid">
+        <article class="card price-card">
           <div class="card-content">
             <h2>グループレッスン</h2>
             <p class="price">6,500円<span>/月</span></p>
@@ -55,26 +56,37 @@
           </div>
         </article>
 
-        <article class="price-card highlight">
+        <article class="card price-card highlight">
           <div class="card-content">
             <h2>個人レッスン</h2>
             <p class="price">10,000円<span>/月</span></p>
             <ul class="feature-list">
               <li>月4回レッスン</li>
-              <li>カスタマイズカリキュラム</li>
+              <li>完全個別指導</li>
               <li>柔軟なスケジュール</li>
             </ul>
           </div>
         </article>
 
-        <article class="schedule-card">
+        <article class="card schedule-table">
           <div class="card-content">
-            <h2>受付時間</h2>
-            <ul class="schedule-list">
-              <li>月～金: 10:00 - 21:00</li>
-              <li>土曜日: 10:00 - 18:00</li>
-              <li>日曜日: 休校</li>
-            </ul>
+            <h2>レッスン時間</h2>
+            <div class="table-wrapper">
+              <table>
+                <tr>
+                  <th>曜日</th>
+                  <th>時間</th>
+                </tr>
+                <tr>
+                  <td>月～金</td>
+                  <td>10:00 - 21:00</td>
+                </tr>
+                <tr>
+                  <td>土曜</td>
+                  <td>10:00 - 18:00</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </article>
       </section>
