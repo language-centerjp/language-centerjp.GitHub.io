@@ -118,6 +118,23 @@ header {
   margin-bottom: 0.8em;
   line-height: 1.2;
 }
+/* Add to main.css */
+.cta-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--primary-pink);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  z-index: 2000;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
 
 /* ========== Universal Content Styles ========== */
 .main-content {
