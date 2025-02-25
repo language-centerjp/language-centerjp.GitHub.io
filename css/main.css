@@ -1,21 +1,16 @@
 /* ========== Root Variables ========== */
 :root {
-  /* Colors */
   --primary-pink: #ff66cc;
   --primary-yellow: #f7ee00;
   --primary-teal: #00cccc;
   --text-color: #333;
   --white-color: #fff;
-
-  /* Fonts */
-  --font-main: 'Helvetica Neue', Arial, sans-serif;
-
-  /* Layout */
   --header-height: clamp(140px, 18vw, 240px);
-  --vh: 1vh; /* Will be set by JS */
+  --vh: 1vh;
+  --font-main: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ========== Global Resets & Body ========== */
+/* ========== Core Reset ========== */
 * {
   margin: 0;
   padding: 0;
@@ -24,37 +19,34 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-main);
   color: var(--text-color);
-  background-color: var(--primary-yellow);
+  background: var(--primary-yellow);
   line-height: 1.6;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-main {
-  padding-top: var(--header-height);
-  flex: 1;
-}
-
-/* ========== Header ========== */
+/* ========== Header System ========== */
 header {
-  background: var(--primary-yellow);
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: var(--primary-yellow);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
-  min-height: var(--header-height);
+  contain: strict;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 .header-top {
@@ -63,49 +55,20 @@ header {
   align-items: center;
   gap: 20px;
   padding-bottom: 10px;
-  flex-wrap: wrap;
 }
 
 .logo-container {
-  flex: 1 0 200px;
+  flex: 1 0 auto;
 }
 
 .globe-logo {
   height: clamp(100px, 15vw, 180px);
   width: auto;
-  transition: all 0.3s ease;
-}
-
-/* ========== Language Switcher ========== */
-.language-switcher {
-  position: relative;
-  z-index: 1002;
-  flex: 0 1 auto;
-}
-
-.language-switcher select {
-  padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px);
-  border: 2px solid var(--primary-pink);
-  border-radius: 20px;
-  background-color: var(--white-color);
-  color: var(--text-color);
-  font-size: clamp(0.8rem, 2vw, 0.9rem);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.language-switcher select:hover {
-  background-color: var(--primary-pink);
-  color: var(--white-color);
+  transition: height 0.3s ease;
 }
 
 /* ========== Navigation ========== */
 .header-nav {
-  background: var(--primary-yellow);
-  position: relative;
-  z-index: 1001;
   margin-top: auto;
 }
 
@@ -118,40 +81,18 @@ header {
   padding: 10px 0;
 }
 
-.header-nav ul li {
-  margin: 0;
+.header-nav li {
   flex: 0 0 auto;
 }
 
-.header-nav ul li a {
+.header-nav a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
-  white-space: nowrap;
   padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
-}
-
-.header-nav ul li a:hover {
-  background-color: rgba(255, 102, 204, 0.1);
-}
-
-.header-nav ul li a.active {
-  color: var(--primary-pink);
-  position: relative;
-}
-
-.header-nav ul li a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background-color: var(--primary-pink);
+  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 /* ========== Hero Section ========== */
@@ -159,9 +100,9 @@ header {
   min-height: calc(var(--vh, 1vh) * 100 - var(--header-height));
   display: flex;
   align-items: center;
-  background-color: var(--primary-yellow);
-  padding: 2em 0;
   position: relative;
+  z-index: 1;
+  margin-top: var(--header-height);
 }
 
 .left-panel {
@@ -171,10 +112,6 @@ header {
   padding: 0 clamp(1em, 5vw, 2em);
 }
 
-.hero-text {
-  max-width: 800px;
-}
-
 .hero-text h1 {
   color: var(--primary-pink);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -182,63 +119,20 @@ header {
   line-height: 1.2;
 }
 
-.hero-text p {
-  margin-bottom: 1.5em;
-  line-height: 1.7;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+/* ========== Universal Content Styles ========== */
+.main-content {
+  flex: 1;
 }
 
-.cta-button {
-  background-color: var(--primary-pink);
-  color: var(--white-color);
-  padding: 0.8em 1.5em;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  transition: transform 0.2s ease;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-}
-
-/* ========== Info Sections ========== */
 .info-section {
   padding: 2em clamp(1em, 5vw, 2em);
-  background-color: var(--primary-teal);
+  background: var(--primary-teal);
   color: var(--white-color);
   text-align: center;
 }
 
-.info-section h2 {
-  font-size: clamp(1.5rem, 3vw, 1.8rem);
-  margin-bottom: 0.8em;
-}
-
-.info-section p {
-  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-  line-height: 1.7;
-  margin-bottom: 1em;
-}
-
-/* ========== Footer ========== */
 footer {
   text-align: center;
-  background-color: var(--primary-yellow);
   padding: 1.5em 0;
   margin-top: auto;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-}
-
-/* ========== Dark Mode ========== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-yellow: #c9b458;
-    --white-color: #2b2b2b;
-    --text-color: #f0f0f0;
-  }
 }
