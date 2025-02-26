@@ -102,7 +102,7 @@ header {
   align-items: center;
   position: relative;
   z-index: 1;
-  margin-top: var(--header-height) + 100px);
+  margin-top: calc(var(--header-height) + 100px);
 }
 
 .left-panel {
@@ -118,7 +118,64 @@ header {
   margin-bottom: 0.8em;
   line-height: 1.2;
 }
-/* Add to main.css */
+
+/* ========== Contact & Course Styles ========== */
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  color: var(--white-color);
+}
+
+.contact-list li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-list a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ========== CTA Banner ========== */
 .cta-banner {
   position: fixed;
   bottom: 0;
