@@ -2,21 +2,44 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>お問い合わせ - The Language Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ - The American Language Center in Japan</title>
+  <meta name="description" content="お問い合わせはこちらから。英語学習に関するご質問、無料体験レッスンのお申込みなど承ります">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LanguageSchool",
+    "name": "The American Language Center in Japan",
+    "image": "https://yourdomain.com/images/globe-logo.png",
+    "priceRange": "¥6,500 - ¥10,000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kawaguchi",
+      "addressRegion": "Saitama",
+      "streetAddress": "○○-○○"
+    },
+    "telephone": "+81-90-1766-0693",
+    "email": "language.center@gmail.com",
+    "sameAs": [
+      "https://facebook.com/yourpage",
+      "https://instagram.com/yourprofile"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="ランゲージセンターロゴ" class="globe-logo">
+        <img src="images/globe-logo.png" alt="アメリカンランゲージセンターロゴ" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="言語選択">
-          <option value="ja">日本語</option>
-          <option value="en">English</option>
+          <option value="ja" selected>🇯🇵 日本語</option>
+          <option value="en">🇺🇸 English</option>
         </select>
       </div>
     </div>
@@ -39,24 +62,42 @@
     <section class="content-wrap">
       <section class="page-header">
         <h1>お問い合わせ</h1>
-        <p>ご質問やご相談がございましたらお気軽にお問い合わせください</p>
+        <p>24時間以内に返信いたします</p>
       </section>
 
-      <section class="info-section contact-form">
-        <form>
+      <section class="grid-container contact-info">
+        <div class="card contact-card">
+          <h2>連絡先情報</h2>
+          <ul class="contact-list">
+            <li>📞 <a href="tel:090-1766-0693">090-1766-0693</a></li>
+            <li>📧 <a href="mailto:language.center@gmail.com">language.center@gmail.com</a></li>
+            <li>📍 埼玉県川口市○○-○○</li>
+            <li>🕒 営業時間: 10:00 - 20:00 (月曜定休)</li>
+          </ul>
+        </div>
+
+        <form class="card contact-form" netlify>
           <div class="form-group">
             <label for="name">お名前</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
           </div>
           
           <div class="form-group">
             <label for="email">メールアドレス</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
           </div>
           
           <div class="form-group">
             <label for="message">メッセージ</label>
-            <textarea id="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="preferred-contact">希望連絡方法</label>
+            <select id="preferred-contact" name="preferred-contact">
+              <option value="email">メール</option>
+              <option value="phone">電話</option>
+            </select>
           </div>
           
           <button type="submit" class="cta-button">送信する</button>
@@ -66,8 +107,23 @@
   </main>
 
   <footer>
-    <p>© 2025 The Language Center. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/yourpage" aria-label="Facebook">
+        <img src="/images/facebook-icon.png" alt="Facebook" width="32">
+      </a>
+      <a href="https://instagram.com/yourprofile" aria-label="Instagram">
+        <img src="/images/instagram-icon.png" alt="Instagram" width="32">
+      </a>
+    </div>
+    <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
+
+  <div class="cta-banner">
+    📞 <strong>今すぐ相談!</strong> 090-1766-0693 | 
+    <a href="mailto:language.center@gmail.com" style="color:white;text-decoration:underline">
+      メールで問い合わせ
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
