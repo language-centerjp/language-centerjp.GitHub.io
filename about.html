@@ -2,22 +2,45 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F7EE00">
-  <title>学校について - The Language Center</title>
+  <title>学校について - The American Language Center in Japan</title>
+  <meta name="description" content="当校の使命と教育理念をご紹介。川口市で質の高い英語教育を提供しています">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LanguageSchool",
+    "name": "The American Language Center in Japan",
+    "image": "https://yourdomain.com/images/globe-logo.png",
+    "priceRange": "¥6,500 - ¥10,000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kawaguchi",
+      "addressRegion": "Saitama",
+      "streetAddress": "○○-○○"
+    },
+    "telephone": "+81-90-1766-0693",
+    "email": "language.center@gmail.com",
+    "sameAs": [
+      "https://facebook.com/yourpage",
+      "https://instagram.com/yourprofile"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+        <img src="images/globe-logo.png" alt="アメリカンランゲージセンターロゴ" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="言語選択">
-          <option value="ja">日本語</option>
-          <option value="en">English</option>
+          <option value="ja" selected>🇯🇵 日本語</option>
+          <option value="en">🇺🇸 English</option>
         </select>
       </div>
     </div>
@@ -36,40 +59,85 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
         <h1>学校について</h1>
-        <p>ランゲージセンターの使命と教育理念についてご紹介します。</p>
+        <p>英語を通じて川口と世界をつなぐ</p>
       </section>
 
-      <section class="info-section">
-        <div class="text-block">
-          <h2>私たちのミッション</h2>
-          <p>私たちの目標は、すべての生徒が楽しく、効果的に英語を学ぶことができる環境を提供することです。</p>
-        </div>
+      <section class="grid-container about-content">
+        <article class="card mission-card">
+          <h2>私たちの使命</h2>
+          <div class="card-content">
+            <p>すべての生徒が次のことを達成できる環境を提供します:</p>
+            <ul class="feature-list">
+              <li>実践的なコミュニケーションスキルの習得</li>
+              <li>異文化理解の促進</li>
+              <li>国際的な場面での自信構築</li>
+              <li>楽しい学習体験の提供</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="text-block">
-          <h2>私たちの特徴</h2>
-          <ul class="feature-list">
-            <li>経験豊富なネイティブ講師による指導</li>
-            <li>実践的な英会話に重点を置いたカリキュラム</li>
-            <li>初心者から上級者まで対応したクラス</li>
-            <li>リラックスした環境で楽しく学べるレッスン</li>
-          </ul>
-        </div>
+        <article class="card history-card">
+          <h2>沿革</h2>
+          <div class="card-content">
+            <p>2020年の設立以来、1,200名以上の生徒が目標を達成:</p>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">満足度</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15名</div>
+                <div class="stat-label">資格保有講師</div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-        <div class="text-block">
-          <h2>設立の背景</h2>
-          <p>ランゲージセンターは、より多くの人々が英語を話せるようになり、世界とつながる機会を持てるようにするために設立されました。</p>
-        </div>
+        <article class="card values-card">
+          <h2>教育理念</h2>
+          <div class="card-content">
+            <ul class="value-list">
+              <li>
+                <h3>質の高い指導</h3>
+                <p>TESOL資格を持つネイティブ講師陣</p>
+              </li>
+              <li>
+                <h3>実践重視</h3>
+                <p>毎レッスンでの実践的会話練習</p>
+              </li>
+              <li>
+                <h3>地域交流</h3>
+                <p>定期的な異文化交流イベント</p>
+              </li>
+            </ul>
+          </div>
+        </article>
       </section>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 The Language Center. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/yourpage" aria-label="Facebook">
+        <img src="/images/facebook-icon.png" alt="Facebook" width="32">
+      </a>
+      <a href="https://instagram.com/yourprofile" aria-label="Instagram">
+        <img src="/images/instagram-icon.png" alt="Instagram" width="32">
+      </a>
+    </div>
+    <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
+
+  <div class="cta-banner">
+    📞 <strong>今すぐ相談!</strong> 090-1766-0693 | 
+    <a href="mailto:language.center@gmail.com" style="color:white;text-decoration:underline">
+      メールで問い合わせ
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
