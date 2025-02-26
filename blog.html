@@ -2,21 +2,34 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>ブログ - The Language Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F7EE00">
+  <title>ブログ - The American Language Center in Japan</title>
+  <meta name="description" content="英語学習のコツ、文化解説、学校情報を専門家が発信">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "ランゲージセンター公式ブログ",
+    "description": "英語学習リソースと教育情報",
+    "url": "https://yourdomain.com/blog.html",
+    "image": "https://yourdomain.com/images/blog-banner.jpg"
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="ランゲージセンターロゴ" class="globe-logo">
+        <img src="images/globe-logo.png" alt="アメリカンランゲージセンターロゴ" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="言語選択">
-          <option value="ja">日本語</option>
-          <option value="en">English</option>
+          <option value="ja" selected>🇯🇵 日本語</option>
+          <option value="en">🇺🇸 English</option>
         </select>
       </div>
     </div>
@@ -38,17 +51,34 @@
   <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
-        <h1>ブログ</h1>
-        <p>英語学習のヒントと最新情報</p>
+        <h1>英語学習ブログ</h1>
+        <p>効果的な学習法と最新情報</p>
       </section>
 
       <section class="grid-container blog-grid">
         <article class="card blog-post">
+          <img src="images/vocab-building.jpg" alt="単語帳" class="post-image">
           <div class="card-content">
             <h2>効果的な語彙増強法</h2>
-            <p class="post-date">2024年3月15日</p>
-            <p class="post-excerpt">1日5つの新しい単語を覚えるコツ...</p>
-            <a href="#" class="read-more">続きを読む</a>
+            <div class="post-meta">
+              <span class="post-date">2024年3月15日</span>
+              <span class="post-author">佐藤 恵</span>
+            </div>
+            <p class="post-excerpt">1日5つの新しい単語を覚える科学的アプローチ...</p>
+            <a href="#" class="cta-button read-more">記事を読む</a>
+          </div>
+        </article>
+
+        <article class="card blog-post">
+          <img src="images/culture-exchange.jpg" alt="異文化交流" class="post-image">
+          <div class="card-content">
+            <h2>文化の違いを理解する</h2>
+            <div class="post-meta">
+              <span class="post-date">2024年3月10日</span>
+              <span class="post-author">田中 健太</span>
+            </div>
+            <p class="post-excerpt">英会話に潜む文化的ニュアンスの解読法...</p>
+            <a href="#" class="cta-button read-more">記事を読む</a>
           </div>
         </article>
       </section>
@@ -56,8 +86,23 @@
   </main>
 
   <footer>
-    <p>© 2025 The Language Center. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/yourpage" aria-label="Facebook">
+        <img src="/images/facebook-icon.png" alt="Facebook" width="32">
+      </a>
+      <a href="https://instagram.com/yourprofile" aria-label="Instagram">
+        <img src="/images/instagram-icon.png" alt="Instagram" width="32">
+      </a>
+    </div>
+    <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
+
+  <div class="cta-banner">
+    📞 <strong>無料説明会受付中!</strong> 090-1766-0693 | 
+    <a href="mailto:language.center@gmail.com" style="color:white;text-decoration:underline">
+      メールで申し込む
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
