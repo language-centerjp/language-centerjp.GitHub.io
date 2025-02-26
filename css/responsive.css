@@ -15,6 +15,15 @@
   .header-top {
     flex-direction: column;
   }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .card {
+    margin: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -30,11 +39,19 @@
   .hero-text h1 {
     font-size: clamp(2rem, 3.5vw, 2.2rem);
   }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1025px) {
   .header-nav ul {
     gap: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -62,5 +79,27 @@
   
   html {
     overscroll-behavior-y: contain;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    min-height: 48px;
+  }
+}
+
+/* ========== Course & Contact Specific ========== */
+@media (max-width: 480px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-features li {
+    font-size: 0.9rem;
+  }
+  
+  .cta-banner {
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
