@@ -1,43 +1,23 @@
-/* ========== Mobile First Media Queries ========== */
-@supports (padding: max(0px)) {
-  body, header, main {
-    padding-left: max(12px, env(safe-area-inset-left));
-    padding-right: max(12px, env(safe-area-inset-right));
-  }
-}
-
+/* ========== Mobile First Breakpoints ========== */
 @media (max-width: 767px) {
+  .header-top {
+    flex-direction: column;
+  }
+
   .header-nav ul {
     grid-template-columns: repeat(2, 1fr);
     font-size: 0.8em;
-  }
-  
-  .header-top {
-    flex-direction: column;
   }
 
   .grid-container {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
-
-  .card {
-    margin: 0.5rem;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   :root {
     --header-height: clamp(120px, 15vw, 160px);
-  }
-  
-  .header-nav ul {
-    gap: 10px;
-    font-size: 0.9em;
-  }
-  
-  .hero-text h1 {
-    font-size: clamp(2rem, 3.5vw, 2.2rem);
   }
 
   .grid-container {
@@ -46,23 +26,8 @@
 }
 
 @media (min-width: 1025px) {
-  .header-nav ul {
-    gap: 1.5rem;
-  }
-
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ========== iPad Pro Landscape Fixes ========== */
-@media (orientation: landscape) and (min-width: 1024px) {
-  .globe-logo {
-    height: clamp(100px, 10vh, 140px);
-  }
-  
-  .header-nav ul {
-    flex-wrap: nowrap;
   }
 }
 
@@ -72,34 +37,10 @@
     min-height: 44px;
     padding: 1rem 1.5rem;
   }
-  
-  .header-nav a {
-    padding: 12px 16px;
-  }
-  
-  html {
-    overscroll-behavior-y: contain;
-  }
 
   .form-group input,
   .form-group textarea,
   .form-group select {
     min-height: 48px;
-  }
-}
-
-/* ========== Course & Contact Specific ========== */
-@media (max-width: 480px) {
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-  
-  .course-features li {
-    font-size: 0.9rem;
-  }
-  
-  .cta-banner {
-    font-size: 0.9rem;
-    padding: 10px;
   }
 }
