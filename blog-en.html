@@ -2,22 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F7EE00">
-  <title>Blog - The Language Center</title>
+  <title>Blog - The American Language Center in Japan</title>
+  <meta name="description" content="English learning tips, cultural insights, and school updates from our language experts">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Language Center Blog",
+    "description": "Educational articles and English learning resources",
+    "url": "https://yourdomain.com/blog-en.html",
+    "image": "https://yourdomain.com/images/blog-banner.jpg"
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+        <img src="images/globe-logo.png" alt="American Language Center Logo" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="Select language">
-          <option value="en">English</option>
-          <option value="ja">日本語</option>
+          <option value="en" selected>🇺🇸 English</option>
+          <option value="ja">🇯🇵 日本語</option>
         </select>
       </div>
     </div>
@@ -39,17 +51,34 @@
   <main class="main-content">
     <section class="content-wrap">
       <section class="page-header">
-        <h1>Language Center Blog</h1>
-        <p>English learning tips and updates</p>
+        <h1>Language Learning Blog</h1>
+        <p>Insights & Strategies for English Success</p>
       </section>
 
       <section class="grid-container blog-grid">
         <article class="card blog-post">
+          <img src="images/vocab-building.jpg" alt="Vocabulary notebook" class="post-image">
           <div class="card-content">
             <h2>Effective Vocabulary Building</h2>
-            <p class="post-date">March 15, 2024</p>
-            <p class="post-excerpt">Tips for memorizing 5 new words daily...</p>
-            <a href="#" class="read-more">Read More</a>
+            <div class="post-meta">
+              <span class="post-date">March 15, 2024</span>
+              <span class="post-author">By Sarah Johnson</span>
+            </div>
+            <p class="post-excerpt">Discover proven techniques to learn 5 new words daily...</p>
+            <a href="#" class="cta-button read-more">Read Article</a>
+          </div>
+        </article>
+
+        <article class="card blog-post">
+          <img src="images/culture-exchange.jpg" alt="Cultural exchange" class="post-image">
+          <div class="card-content">
+            <h2>Understanding Cultural Nuances</h2>
+            <div class="post-meta">
+              <span class="post-date">March 10, 2024</span>
+              <span class="post-author">By Michael Tanaka</span>
+            </div>
+            <p class="post-excerpt">Master the hidden meanings in English conversations...</p>
+            <a href="#" class="cta-button read-more">Read Article</a>
           </div>
         </article>
       </section>
@@ -57,8 +86,23 @@
   </main>
 
   <footer>
-    <p>© 2025 The Language Center. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/yourpage" aria-label="Facebook">
+        <img src="/images/facebook-icon.png" alt="Facebook" width="32">
+      </a>
+      <a href="https://instagram.com/yourprofile" aria-label="Instagram">
+        <img src="/images/instagram-icon.png" alt="Instagram" width="32">
+      </a>
+    </div>
+    <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
+
+  <div class="cta-banner">
+    📞 <strong>Join Our Next Workshop!</strong> 090-1766-0693 | 
+    <a href="mailto:language.center@gmail.com" style="color:white;text-decoration:underline">
+      Email Registration
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
