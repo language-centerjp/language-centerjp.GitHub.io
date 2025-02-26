@@ -2,51 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>The Language Center | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The American Language Center in Japan | Home</title>
+  <meta name="description" content="Quality English lessons in Kawaguchi, Saitama. Private lessons from ¥10,000/month, group classes from ¥6,500/month. Free trial lesson available!">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <!-- Add this to your HTML head (index.html) -->
-<meta name="description" content="Enjoy friendly English lessons in Saitama! Affordable group/private classes. Conversation, business English, test prep. Free trial available!">
-<!-- Schema markup for language school -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LanguageSchool",
-  "name": "The Language Center",
-  "image": "https://yourdomain.com/images/globe-logo.png",
-  "priceRange": "¥6,500 - ¥7,000",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kawaguchi",
-    "addressRegion": "Saitama",
-    "streetAddress": "○○-○○"
-  },
-  "telephone": "+81-90-1766-0693",
-  "sameAs": [
-    "https://facebook.com/yourpage",
-    "https://instagram.com/yourprofile"
-  ]
-}
-</script>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LanguageSchool",
+    "name": "The American Language Center in Japan",
+    "image": "https://yourdomain.com/images/globe-logo.png",
+    "priceRange": "¥6,500 - ¥10,000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kawaguchi",
+      "addressRegion": "Saitama",
+      "streetAddress": "○○-○○"
+    },
+    "telephone": "+81-90-1766-0693",
+    "email": "language.center@gmail.com",
+    "sameAs": [
+      "https://facebook.com/yourpage",
+      "https://instagram.com/yourprofile"
+    ]
+  }
+  </script>
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXX');
+  </script>
 </head>
-  <!-- Add above </body> -->
-<div class="cta-banner">
-  📞 <strong>今すぐ相談!</strong> 090-1766-0693 | 
-  <a href="mailto:sean_martinsen@cbr.ocn.ne.jp" style="color:white;text-decoration:underline">
-    メールで問い合わせ
-  </a>
-</div>
+
 <body>
   <header>
     <div class="header-top">
       <div class="logo-container">
-        <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
+        <img src="images/globe-logo.png" alt="American Language Center Logo" class="globe-logo">
       </div>
       <div class="language-switcher">
         <select id="languageSelect" aria-label="Select language">
-          <option value="en">English</option>
-          <option value="ja">日本語</option>
+          <option value="en" selected>🇺🇸 English</option>
+          <option value="ja">🇯🇵 日本語</option>
         </select>
       </div>
     </div>
@@ -66,8 +70,9 @@
   </header>
 
   <section id="hero">
+    <div class="left-panel">
       <div class="hero-text">
-        <h1>Enjoy English at The Language Center!</h1>
+        <h1>Enjoy English at Our Language Center!</h1>
         <p>
           Learn English in a friendly, fun environment with various courses including:
           <br>
@@ -96,8 +101,24 @@
   </main>
 
   <footer>
+    <div class="social-links">
+      <a href="https://facebook.com/yourpage" aria-label="Facebook">
+        <img src="/images/facebook-icon.png" alt="Facebook" width="32">
+      </a>
+      <a href="https://instagram.com/yourprofile" aria-label="Instagram">
+        <img src="/images/instagram-icon.png" alt="Instagram" width="32">
+      </a>
+    </div>
     <p>© 2025 The American Language Center in Japan. All Rights Reserved.</p>
   </footer>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    📞 <strong>Contact Now!</strong> 090-1766-0693 | 
+    <a href="mailto:language.center@gmail.com" style="color:white;text-decoration:underline">
+      Email Inquiry
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
