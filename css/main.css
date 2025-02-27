@@ -28,7 +28,7 @@ body {
   padding-top: calc(var(--header-height) + var(--nav-height));
 }
 
-/* ========== Header & Navigation ========== */
+/* Header & Navigation */
 header {
   position: fixed;
   top: 0;
@@ -109,7 +109,7 @@ header {
   right: 20px;
 }
 
-/* ========== Main Content Styles ========== */
+/* Main Content */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -139,6 +139,10 @@ main {
   padding: 2rem;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .stats-grid {
@@ -183,7 +187,7 @@ main {
   transform: scale(1.05);
 }
 
-/* ========== Footer & CTA ========== */
+/* Footer & CTA */
 footer {
   background: var(--primary-teal);
   color: white;
@@ -214,8 +218,4 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  /* Responsive styles remain unchanged from previous version */
 }
