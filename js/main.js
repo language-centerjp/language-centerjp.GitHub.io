@@ -1,3 +1,4 @@
+// Final Version (No Changes)
 document.addEventListener('DOMContentLoaded', function() {
   // Language Switcher
   const languageSelect = document.getElementById('languageSelect');
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Mobile Nav Toggle
+  // Mobile Menu
   const navContainer = document.querySelector('.header-nav');
   const mobileMenuButton = document.createElement('button');
   mobileMenuButton.innerHTML = '☰';
@@ -22,14 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.header-nav ul').classList.toggle('active');
   });
 
-  // Close mobile menu on click outside
   document.addEventListener('click', function(e) {
     if(!e.target.closest('.header-nav')) {
       document.querySelector('.header-nav ul').classList.remove('active');
     }
   });
 
-  // Set active navigation link
+  // Active Link
   const currentPage = location.pathname.split('/').pop();
   document.querySelectorAll('.header-nav a').forEach(link => {
     if(link.getAttribute('href') === currentPage) {
@@ -37,9 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Initialize Maps
-  const mapContainers = document.querySelectorAll('.map-placeholder');
-  mapContainers.forEach(container => {
-    container.innerHTML = '<iframe src="https://maps.google.com/maps?q=埼玉県川口市本町1-1-1&output=embed" style="border:0" allowfullscreen></iframe>';
+  // Maps
+  document.querySelectorAll('.map-placeholder').forEach(container => {
+    container.innerHTML = '<iframe src="https://maps.google.com/maps?q=埼玉県川口市本町1-1-1&output=embed" allowfullscreen></iframe>';
   });
 });
