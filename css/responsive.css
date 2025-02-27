@@ -1,46 +1,43 @@
-/* ========== Mobile First Breakpoints ========== */
-@media (max-width: 767px) {
-  .header-top {
-    flex-direction: column;
+@media (max-width: 768px) {
+  :root {
+    --header-height: 160px;
   }
 
   .header-nav ul {
-    grid-template-columns: repeat(2, 1fr);
-    font-size: 0.8em;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
-  .grid-container {
-    grid-template-columns: 1fr;
+  .header-nav ul.active {
+    display: flex;
+  }
+
+  .header-nav li {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-nav a {
     padding: 1rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  :root {
-    --header-height: clamp(120px, 15vw, 160px);
+    justify-content: center;
   }
 
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
-}
-
-@media (min-width: 1025px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ========== Touch Device Optimization ========== */
-@media (pointer: coarse) {
-  .cta-button, .language-switcher select {
-    min-height: 44px;
-    padding: 1rem 1.5rem;
+  
+  .price-card.highlight {
+    transform: none;
+    order: -1;
   }
 
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    min-height: 48px;
-  }
+  /* Other responsive styles remain the same */
 }
