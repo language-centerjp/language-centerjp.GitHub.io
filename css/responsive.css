@@ -39,5 +39,46 @@
     order: -1;
   }
 
-  /* Other responsive styles remain the same */
+  .globe-logo {
+    height: 120px;
+  }
+
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav a {
+    font-size: 0.9em;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .stat-item {
+    padding: 0.75rem;
+  }
 }
