@@ -38,7 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Maps
-  document.querySelectorAll('.map-placeholder').forEach(container => {
-    container.innerHTML = '<iframe src="https://maps.google.com/maps?q=埼玉県川口市本町1-1-1&output=embed" allowfullscreen></iframe>';
+document.addEventListener('DOMContentLoaded', function() {
+  const mapPlaceholders = document.querySelectorAll('.map-placeholder');
+
+  mapPlaceholders.forEach(container => {
+    const iframe = container.nextElementSibling.querySelector('iframe');
+    if (iframe) {
+      const mapUrl = iframe.src;
+      container.innerHTML = `<iframe src="${mapUrl}" style="border: 0" allowfullscreen></iframe>`;
+    } else {
+      container.innerHTML = '<p>Map not available</p>'; // Handle cases where there's no URL
+    }
   });
 });
+
