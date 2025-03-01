@@ -14,9 +14,9 @@
         <img src="images/globe-logo.png" alt="Language Center Logo" class="globe-logo">
       </div>
       <div class="language-switcher">
-        <select id="languageSelect" aria-label="言語選択">
-          <option value="ja" selected>🇯🇵 日本語</option>
-          <option value="en">🇺🇸 English</option>
+        <select id="languageSelect" aria-label="Select language">
+          <option value="en" selected>🇺🇸 English</option>
+          <option value="ja">🇯🇵 日本語</option>
         </select>
       </div>
     </div>
@@ -140,16 +140,15 @@
     <p>© 2025 The Language Center. All Rights Reserved.</p>
   </footer>
 
-  <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Language Switcher
+      // Language Switcher (Fixed)
       const languageSelect = document.getElementById('languageSelect');
       if (languageSelect) {
         languageSelect.addEventListener('change', function(e) {
           const lang = e.target.value;
           const currentPath = window.location.pathname;
-          const newPath = currentPath.replace(/(-en)?\.html$/, lang === 'en' ? '-en.html' : '.html');
+          const newPath = currentPath.replace(/(-en|\.html)/g, lang === 'en' ? '-en.html' : '.html');
           window.location.href = newPath;
         });
       }
@@ -180,7 +179,7 @@
         }
       });
 
-      // Maps Implementation
+      // Maps Implementation (Fixed)
       const mapPlaceholders = document.querySelectorAll('.map-placeholder');
       mapPlaceholders.forEach(container => {
         const noscript = container.nextElementSibling;
