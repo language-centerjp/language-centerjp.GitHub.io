@@ -43,10 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const iframe = container.nextElementSibling.querySelector('iframe');
     if (iframe) {
       const mapUrl = iframe.src;
-      container.innerHTML = `<iframe src="${mapUrl}" style="border: 0" allowfullscreen></iframe>`;
+      const newIframe = document.createElement('iframe');
+      newIframe.src = mapUrl;
+      newIframe.style.border = '0';
+      newIframe.allowFullscreen = true;
+      container.innerHTML = ''; // Clear the "Map loading..." message
+      container.appendChild(newIframe); // Append the NEW iframe to the placeholder
     } else {
       container.innerHTML = '<p>Map not available</p>'; // Handle cases where there's no URL
     }
+  });
+});
+
   });
 });
 
