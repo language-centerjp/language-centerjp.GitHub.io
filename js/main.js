@@ -1,8 +1,7 @@
-// Final Version (No Changes)
 document.addEventListener('DOMContentLoaded', function() {
   // Language Switcher
   const languageSelect = document.getElementById('languageSelect');
-  if(languageSelect) {
+  if (languageSelect) {
     languageSelect.addEventListener('change', function(e) {
       const lang = e.target.value;
       const currentPath = window.location.pathname;
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   document.addEventListener('click', function(e) {
-    if(!e.target.closest('.header-nav')) {
+    if (!e.target.closest('.header-nav')) {
       document.querySelector('.header-nav ul').classList.remove('active');
     }
   });
@@ -32,13 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Active Link
   const currentPage = location.pathname.split('/').pop();
   document.querySelectorAll('.header-nav a').forEach(link => {
-    if(link.getAttribute('href') === currentPage) {
+    if (link.getAttribute('href') === currentPage) {
       link.classList.add('active');
     }
   });
 
   // Maps
-document.addEventListener('DOMContentLoaded', function() {
   const mapPlaceholders = document.querySelectorAll('.map-placeholder');
 
   mapPlaceholders.forEach(container => {
