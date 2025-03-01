@@ -36,25 +36,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Maps
+  // Maps Implementation (Fixed Part)
   const mapPlaceholders = document.querySelectorAll('.map-placeholder');
-
   mapPlaceholders.forEach(container => {
-    const iframe = container.nextElementSibling.querySelector('iframe');
-    if (iframe) {
-      const mapUrl = iframe.src;
-      const newIframe = document.createElement('iframe');
-      newIframe.src = mapUrl;
-      newIframe.style.border = '0';
-      newIframe.allowFullscreen = true;
-      container.innerHTML = ''; // Clear the "Map loading..." message
-      container.appendChild(newIframe); // Append the NEW iframe to the placeholder
+    const noscript = container.nextElementSibling;
+    if (noscript && noscript.tagName === 'NOSCRIPT') {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = noscript.innerHTML;
+      const iframe = tempDiv.querySelector('iframe');
+      
+      if (iframe) {
+        const newIframe = document.createElement('iframe');
+        newIframe.src = iframe.src;
+        newIframe.setAttribute('style', 'border:0');
+        newIframe.setAttribute('allowfullscreen', '');
+        newIframe.setAttribute('loading', 'lazy');
+        newIframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        container.innerHTML = '';
+        container.appendChild(newIframe);
+      } else {
+        container.innerHTML = '<p>Map not available</p>';
+      }
     } else {
-      container.innerHTML = '<p>Map not available</p>'; // Handle cases where there's no URL
+      container.innerHTML = '<p>Map not available</p>';
     }
   });
 });
-
-  });
-});
-
