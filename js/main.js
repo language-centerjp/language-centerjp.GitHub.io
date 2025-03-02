@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = newPath;
     });
   }
-});
 
   // Mobile Menu (unchanged) ================
   const navContainer = document.querySelector('.header-nav');
