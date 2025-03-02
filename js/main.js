@@ -1,17 +1,19 @@
+// main.js
 document.addEventListener('DOMContentLoaded', function() {
-  // Fixed Language Switcher ===============
+  // Language Switcher (Fixed Version)
   const languageSelect = document.getElementById('languageSelect');
   if (languageSelect) {
     languageSelect.addEventListener('change', function(e) {
       const lang = e.target.value;
       const currentPath = window.location.pathname;
       
-      // CORRECTED REGEX PATTERN (THIS IS THE FIX)
-      const newPath = currentPath.replace(/(-en|\.html)/g, lang === 'en' ? '-en.html' : '.html');
+      // CORRECTED REGEX PATTERN
+      const newPath = currentPath.replace(/(-en)?\.html$/i, lang === 'en' ? '-en.html' : '.html');
       
       window.location.href = newPath;
     });
   }
+});
 
   // Mobile Menu (unchanged) ================
   const navContainer = document.querySelector('.header-nav');
