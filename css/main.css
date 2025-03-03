@@ -136,9 +136,10 @@ main {
 .card {
   background: white;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  min-height: 0;
 }
 
 .card:hover {
@@ -184,7 +185,43 @@ main {
 
 .price-card.highlight {
   border: 2px solid var(--primary-pink);
-  transform: scale(1.05);
+}
+
+/* Price Card Specific Styles */
+.price-card .card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.price-card h2 {
+  font-size: 1.25rem;
+  margin: 0.8rem 0 0.5rem;
+  line-height: 1.3;
+}
+
+.price-card .price {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.price-card .feature-list {
+  flex-grow: 1;
+  margin: 0.8rem 0;
+  padding-left: 1rem;
+}
+
+.price-card .feature-list li {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.price-card .price:last-child {
+  margin-top: auto;
+  padding-top: 0.8rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 /* Footer & CTA */
