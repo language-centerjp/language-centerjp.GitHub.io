@@ -1,4 +1,4 @@
-/* css/responsive.css - Final Updated Version */
+/* css/responsive.css - Final Version */
 @media (max-width: 768px) {
   :root {
     --header-height: 160px;
@@ -41,7 +41,6 @@
   }
   
   .price-card.highlight {
-    transform: none;
     order: -1;
   }
 
@@ -85,6 +84,42 @@
   }
 }
 
+/* iPad Pro Landscape Optimization */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .price-card .card-content {
+    padding: 0.8rem;
+  }
+
+  .price-card h2 {
+    font-size: 1.1rem;
+    margin: 0.3rem 0 0.2rem;
+    line-height: 1.2;
+  }
+
+  .price-card .price:first-of-type {
+    margin: -0.2rem 0 0.3rem;
+    font-size: 1rem;
+  }
+
+  .price-card .feature-list {
+    margin: 0.4rem 0;
+  }
+
+  .price-card .feature-list li {
+    font-size: 0.9rem;
+  }
+
+  .price-card .price:last-child {
+    font-size: 0.75rem;
+    padding-top: 0.6rem;
+  }
+}
+
 @media (max-width: 480px) {
   .header-nav a {
     font-size: 0.85em;
@@ -96,5 +131,9 @@
 
   .stat-item {
     padding: 0.75rem;
+  }
+
+  .price-card .price:last-child {
+    font-size: 0.8rem;
   }
 }
