@@ -86,14 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Maps Implementation (FIXED TYPO)
+  // Maps Implementation (Corrected)
   const mapPlaceholders = document.querySelectorAll('.map-placeholder');
   mapPlaceholders.forEach(container => {
     const noscript = container.nextElementSibling;
     if (noscript && noscript.tagName === 'NOSCRIPT') {
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = noscript.innerHTML;
-      const iframe = tempDiv.querySelector('iframe'); // CORRECTED LINE
+      const iframe = tempDiv.querySelector('iframe');
       
       if (iframe) {
         const newIframe = document.createElement('iframe');
