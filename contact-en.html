@@ -41,7 +41,18 @@
     </div>
 
     <div class="card">
-      <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/xpwqvvew" method="post">
+  <label for="name">Your Name:</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="email">Your Email:</label>
+  <input type="email" name="_replyto" id="email" required>
+
+  <label for="message">Your Message:</label>
+  <textarea name="message" id="message" required></textarea>
+
+  <button type="submit">Send</button>
+</form> method="POST">
         <div class="form-group">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
