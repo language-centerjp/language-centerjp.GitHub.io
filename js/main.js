@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     textarea.dispatchEvent(new Event('input'));
   }
 
-  // Original code below - only error corrections made
+  // Language switcher
   const languageSelect = document.getElementById('languageSelect');
   if (languageSelect) {
     languageSelect.addEventListener('change', function(e) {
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Mobile menu
   const navContainer = document.querySelector('.header-nav');
   const mobileMenuButton = document.createElement('button');
   mobileMenuButton.innerHTML = '☰';
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Active link
   const currentPage = location.pathname.split('/').pop();
   document.querySelectorAll('.header-nav a').forEach(link => {
     if (link.getAttribute('href') === currentPage) {
@@ -44,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Contact form submission
   const contactForms = document.querySelectorAll('#contact-form');
   contactForms.forEach(form => {
     form.addEventListener('submit', async (e) => {
@@ -62,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(form.action, {
           method: 'POST',
           body: formData,
-          headers: {'Accept': 'application/json'}
+          headers: { 'Accept': 'application/json' }
         });
 
         if (response.ok) {
@@ -84,24 +87,31 @@ document.addEventListener('DOMContentLoaded', function() {
         btnText.style.visibility = 'visible';
         spinner.style.display = 'none';
         submitBtn.disabled = false;
-        setTimeout(() => messageDiv.style.display = 'none', 5000);
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 5000);
       }
     });
   });
 
-  // Corrected map implementation
+  // Map loading
   const mapPlaceholders = document.querySelectorAll('.map-placeholder');
   mapPlaceholders.forEach(container => {
     const noscript = container.nextElementSibling;
-    if (noscript?.tagName === 'NOSCRIPT') {
+    if (noscript && noscript.tagName === 'NOSCRIPT') {
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = noscript.innerHTML;
-      const iframe = tempDiv.querySelector('iframe'); // Fixed typo
+      const iframe = tempDiv.querySelector('iframe');
       
       if (iframe) {
-        const newIframe = iframe.cloneNode(true);
+        const newIframe = document.createElement('iframe');
+        newIframe.src = iframe.src;
+        newIframe.setAttribute('style', 'border:0');
+        newIframe.setAttribute('allowfullscreen', '');
         newIframe.setAttribute('loading', 'lazy');
-        container.replaceWith(newIframe);
+        newIframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        container.innerHTML = '';
+        container.appendChild(newIframe);
       } else {
         container.innerHTML = '<p>Map not available</p>';
       }
