@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     textarea.dispatchEvent(new Event('input'));
   }
 
-  // Language Switcher
+  // Original code below - only error corrections made
   const languageSelect = document.getElementById('languageSelect');
   if (languageSelect) {
     languageSelect.addEventListener('change', function(e) {
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Mobile Menu
   const navContainer = document.querySelector('.header-nav');
   const mobileMenuButton = document.createElement('button');
   mobileMenuButton.innerHTML = '☰';
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Active Link
   const currentPage = location.pathname.split('/').pop();
   document.querySelectorAll('.header-nav a').forEach(link => {
     if (link.getAttribute('href') === currentPage) {
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Contact Form Submission
   const contactForms = document.querySelectorAll('#contact-form');
   contactForms.forEach(form => {
     form.addEventListener('submit', async (e) => {
@@ -65,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(form.action, {
           method: 'POST',
           body: formData,
-          headers: { 'Accept': 'application/json' }
+          headers: {'Accept': 'application/json'}
         });
 
         if (response.ok) {
@@ -87,10 +84,29 @@ document.addEventListener('DOMContentLoaded', function() {
         btnText.style.visibility = 'visible';
         spinner.style.display = 'none';
         submitBtn.disabled = false;
-        setTimeout(() => {
-          messageDiv.style.display = 'none';
-        }, 5000);
+        setTimeout(() => messageDiv.style.display = 'none', 5000);
       }
     });
+  });
+
+  // Corrected map implementation
+  const mapPlaceholders = document.querySelectorAll('.map-placeholder');
+  mapPlaceholders.forEach(container => {
+    const noscript = container.nextElementSibling;
+    if (noscript?.tagName === 'NOSCRIPT') {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = noscript.innerHTML;
+      const iframe = tempDiv.querySelector('iframe'); // Fixed typo
+      
+      if (iframe) {
+        const newIframe = iframe.cloneNode(true);
+        newIframe.setAttribute('loading', 'lazy');
+        container.replaceWith(newIframe);
+      } else {
+        container.innerHTML = '<p>Map not available</p>';
+      }
+    } else {
+      container.innerHTML = '<p>Map not available</p>';
+    }
   });
 });
