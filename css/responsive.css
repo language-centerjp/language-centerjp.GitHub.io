@@ -77,7 +77,6 @@
     font-size: 2rem;
   }
 
-  /* Scrollbar styling */
   .header-nav ul::-webkit-scrollbar {
     width: 6px;
   }
@@ -88,7 +87,6 @@
   }
 }
 
-/* iPad Pro Landscape Optimization */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   .grid-container {
     grid-template-columns: repeat(2, minmax(280px, 1fr));
