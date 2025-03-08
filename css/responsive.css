@@ -1,4 +1,4 @@
-/* css/responsive.css - Final Corrected Version */
+/* css/responsive.css - Final Version */
 @media (max-width: 768px) {
   :root {
     --header-height: 160px;
@@ -24,20 +24,27 @@
   }
 
   .header-nav ul.active {
-    display: flex;
-  }
-
-  .header-nav li {
-    width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem !important;
     justify-content: center;
   }
 
+  .header-nav li {
+    width: auto;
+    border-bottom: none;
+    margin: 0;
+  }
+
   .header-nav a {
-    padding: 1rem;
-    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background: rgba(255,255,255,0.9);
+    border-radius: 4px;
     font-size: 0.9em;
-    width: 100%;
+    width: auto;
   }
 
   .stats-grid {
@@ -86,7 +93,6 @@
     border-radius: 3px;
   }
 
-  /* Form Input Fixes Added Here */
   .form-group input,
   .form-group textarea {
     font-size: 16px;
