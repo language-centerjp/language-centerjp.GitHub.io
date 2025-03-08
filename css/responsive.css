@@ -1,4 +1,4 @@
-/* css/responsive.css - Final Version */
+/* css/responsive.css - Final Corrected Version */
 @media (max-width: 768px) {
   :root {
     --header-height: 160px;
@@ -85,6 +85,13 @@
     background: rgba(0,0,0,0.2);
     border-radius: 3px;
   }
+
+  /* Form Input Fixes Added Here */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+    min-height: 2.5em;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
@@ -128,15 +135,7 @@
   .form-group textarea {
     font-size: 16px !important;
     line-height: 1.4;
-
-
-@media (max-width: 768px) {
-  .form-group input,
-  .form-group textarea {
-    font-size: 16px;
-    min-height: 2.5em;
   }
-  /* ... existing mobile styles ... */
 }
 
 @media (max-width: 480px) {
