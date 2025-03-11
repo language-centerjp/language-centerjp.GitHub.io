@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>よくある質問 - アメリカンランゲージセンター</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="images/globe-logo.png" alt="アメリカンランゲージセンターロゴ" class="globe-logo">
+      </div>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="言語選択">
+          <option value="ja" selected>🇯🇵 日本語</option>
+          <option value="en">🇺🇸 English</option>
+        </select>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="courses.html">コース</a></li>
+        <li><a href="teachers.html">講師</a></li>
+        <li><a href="testimonials.html">受講者の声</a></li>
+        <li><a href="locations.html">所在地</a></li>
+        <li><a href="schedule.html">スケジュール＆料金</a></li>
+        <li><a href="about.html">学校について</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-section">
+      <h1>よくある質問</h1>
+      <div class="faq-search">
+        <input type="text" placeholder="FAQを検索..." id="faqSearch">
+      </div>
+    </div>
+
+    <div class="card faq-section">
+      <div class="faq-categories">
+        <a href="#general">基本情報</a>
+        <a href="#courses">コース関連</a>
+        <a href="#payments">お支払い</a>
+      </div>
+
+      <div id="general" class="faq-category">
+        <div class="faq-item">
+          <button class="accordion">
+            <span class="icon">▶</span>
+            営業時間はどのようになっていますか？
+          </button>
+          <div class="panel">
+            <p>月曜日から土曜日の10:00～20:00まで営業しています。祝日は休校となります。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="accordion">
+            <span class="icon">▶</span>
+            無料体験レッスンはありますか？
+          </button>
+          <div class="panel">
+            <p>はい、全ての新規生徒様に1回の無料体験レッスンを提供しています。お問い合わせください。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="accordion">
+            <span class="icon">▶</span>
+            講師はネイティブスピーカーですか？
+          </button>
+          <div class="panel">
+            <p>全ての講師は英語ネイティブスピーカーで、教員免許を保持しています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="courses" class="faq-category">
+        <div class="faq-item">
+          <button class="accordion">
+            <span class="icon">▶</span>
+            コースのレベル分けは？
+          </button>
+          <div class="panel">
+            <p>初心者から上級者まで6段階のレベルを用意しています。<a href="courses.html">コース詳細</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="payments" class="faq-category">
+        <div class="faq-item">
+          <button class="accordion">
+            <span class="icon">▶</span>
+            支払い方法は？
+          </button>
+          <div class="panel">
+            <div class="payment-methods">
+              <img src="images/visa.png" alt="VISA">
+              <img src="images/mastercard.png" alt="マスターカード">
+              <img src="images/konbini.png" alt="コンビニ払い">
+            </div>
+            <p>クレジットカード、銀行振込、コンビニ払いをご利用いただけます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="urgent-notice covid-notice">
+        <div class="notice-icon">🦠</div>
+        <p>コロナ対策：全ての教室に空気清浄機を設置、マスク着用必須です。<a href="safety.html">詳細はこちら</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 アメリカンランゲージセンター All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
