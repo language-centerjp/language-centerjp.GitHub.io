@@ -1,0 +1,598 @@
+{
+  "classes": [
+    // ========== Urawa Parco (Mondays, 10:30 AM - 12:00 PM) ==========
+    {
+      "id": "urawa-parco-2025-03-17",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-17T10:30:00",
+      "end": "2025-03-17T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-03-17T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-03-24",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-24T10:30:00",
+      "end": "2025-03-24T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-03-24T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-03-31",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-31T10:30:00",
+      "end": "2025-03-31T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-03-31T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-04-07",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-07T10:30:00",
+      "end": "2025-04-07T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-04-07T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-04-14",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-14T10:30:00",
+      "end": "2025-04-14T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-04-14T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-04-21",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-21T10:30:00",
+      "end": "2025-04-21T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-04-21T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-04-28",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-28T10:30:00",
+      "end": "2025-04-28T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-04-28T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-05-05",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-05T10:30:00",
+      "end": "2025-05-05T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-05-05T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-05-12",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-12T10:30:00",
+      "end": "2025-05-12T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-05-12T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-05-19",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-19T10:30:00",
+      "end": "2025-05-19T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-05-19T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-05-26",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-26T10:30:00",
+      "end": "2025-05-26T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-05-26T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-06-02",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-02T10:30:00",
+      "end": "2025-06-02T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-06-02T10:30:00"]
+    },
+    {
+      "id": "urawa-parco-2025-06-09",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-09T10:30:00",
+      "end": "2025-06-09T12:00:00",
+      "location": "Urawa Parco",
+      "availableSeats": 10,
+      "slots": ["2025-06-09T10:30:00"]
+    },
+
+    // ========== Saitama Shiritsu Harayama (Fridays, 10:00 AM - 12:00 PM) ==========
+    {
+      "id": "harayama-2025-03-21",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-21T10:00:00",
+      "end": "2025-03-21T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-21T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-03-28",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-28T10:00:00",
+      "end": "2025-03-28T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-28T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-04-04",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-04T10:00:00",
+      "end": "2025-04-04T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-04T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-04-11",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-11T10:00:00",
+      "end": "2025-04-11T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-11T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-04-18",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-18T10:00:00",
+      "end": "2025-04-18T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-18T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-04-25",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-25T10:00:00",
+      "end": "2025-04-25T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-25T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-05-02",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-02T10:00:00",
+      "end": "2025-05-02T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-02T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-05-09",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-09T10:00:00",
+      "end": "2025-05-09T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-09T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-05-16",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-16T10:00:00",
+      "end": "2025-05-16T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-16T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-05-23",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-23T10:00:00",
+      "end": "2025-05-23T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-23T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-05-30",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-30T10:00:00",
+      "end": "2025-05-30T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-30T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-06-06",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-06T10:00:00",
+      "end": "2025-06-06T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-06T10:00:00"]
+    },
+    {
+      "id": "harayama-2025-06-13",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-13T10:00:00",
+      "end": "2025-06-13T12:00:00",
+      "location": "Saitama Shiritsu Harayama Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-13T10:00:00"]
+    },
+
+    // ========== Shibakita Community Center (Tuesdays, 3:30 PM - 5:00 PM) ==========
+    {
+      "id": "shibakita-2025-03-18",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-18T15:30:00",
+      "end": "2025-03-18T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-18T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-03-25",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-25T15:30:00",
+      "end": "2025-03-25T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-25T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-04-01",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-01T15:30:00",
+      "end": "2025-04-01T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-01T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-04-08",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-08T15:30:00",
+      "end": "2025-04-08T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-08T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-04-15",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-15T15:30:00",
+      "end": "2025-04-15T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-15T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-04-22",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-22T15:30:00",
+      "end": "2025-04-22T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-22T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-04-29",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-29T15:30:00",
+      "end": "2025-04-29T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-29T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-05-06",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-06T15:30:00",
+      "end": "2025-05-06T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-06T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-05-13",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-13T15:30:00",
+      "end": "2025-05-13T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-13T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-05-20",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-20T15:30:00",
+      "end": "2025-05-20T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-20T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-05-27",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-27T15:30:00",
+      "end": "2025-05-27T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-27T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-06-03",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-03T15:30:00",
+      "end": "2025-06-03T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-03T15:30:00"]
+    },
+    {
+      "id": "shibakita-2025-06-10",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-10T15:30:00",
+      "end": "2025-06-10T17:00:00",
+      "location": "Shibakita Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-10T15:30:00"]
+    },
+
+    // ========== Saiwaicho Community Center (Fridays, 1:00 PM - 3:00 PM) ==========
+    {
+      "id": "saiwaicho-2025-03-21",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-21T13:00:00",
+      "end": "2025-03-21T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-21T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-03-28",
+      "title": "Conversational English (Group)",
+      "start": "2025-03-28T13:00:00",
+      "end": "2025-03-28T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-28T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-04-04",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-04T13:00:00",
+      "end": "2025-04-04T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-04T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-04-11",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-11T13:00:00",
+      "end": "2025-04-11T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-11T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-04-18",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-18T13:00:00",
+      "end": "2025-04-18T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-18T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-04-25",
+      "title": "Conversational English (Group)",
+      "start": "2025-04-25T13:00:00",
+      "end": "2025-04-25T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-25T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-05-02",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-02T13:00:00",
+      "end": "2025-05-02T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-02T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-05-09",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-09T13:00:00",
+      "end": "2025-05-09T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-09T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-05-16",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-16T13:00:00",
+      "end": "2025-05-16T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-16T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-05-23",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-23T13:00:00",
+      "end": "2025-05-23T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-23T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-05-30",
+      "title": "Conversational English (Group)",
+      "start": "2025-05-30T13:00:00",
+      "end": "2025-05-30T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-30T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-06-06",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-06T13:00:00",
+      "end": "2025-06-06T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-06T13:00:00"]
+    },
+    {
+      "id": "saiwaicho-2025-06-13",
+      "title": "Conversational English (Group)",
+      "start": "2025-06-13T13:00:00",
+      "end": "2025-06-13T15:00:00",
+      "location": "Saiwaicho Community Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-13T13:00:00"]
+    },
+
+    // ========== Miyado City Center (Fridays, 6:00 PM - 7:30 PM) ==========
+    {
+      "id": "miyado-2025-03-21",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-03-21T18:00:00",
+      "end": "2025-03-21T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-21T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-03-28",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-03-28T18:00:00",
+      "end": "2025-03-28T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-03-28T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-04-04",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-04-04T18:00:00",
+      "end": "2025-04-04T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-04T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-04-11",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-04-11T18:00:00",
+      "end": "2025-04-11T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-11T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-04-18",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-04-18T18:00:00",
+      "end": "2025-04-18T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-18T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-04-25",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-04-25T18:00:00",
+      "end": "2025-04-25T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-04-25T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-05-02",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-05-02T18:00:00",
+      "end": "2025-05-02T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-02T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-05-09",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-05-09T18:00:00",
+      "end": "2025-05-09T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-09T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-05-16",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-05-16T18:00:00",
+      "end": "2025-05-16T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-16T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-05-23",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-05-23T18:00:00",
+      "end": "2025-05-23T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-23T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-05-30",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-05-30T18:00:00",
+      "end": "2025-05-30T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-05-30T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-06-06",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-06-06T18:00:00",
+      "end": "2025-06-06T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-06T18:00:00"]
+    },
+    {
+      "id": "miyado-2025-06-13",
+      "title": "Pre-Elementary School Class",
+      "start": "2025-06-13T18:00:00",
+      "end": "2025-06-13T19:30:00",
+      "location": "Miyado City Center",
+      "availableSeats": 10,
+      "slots": ["2025-06-13T18:00:00"]
+    }
+  ]
+}
