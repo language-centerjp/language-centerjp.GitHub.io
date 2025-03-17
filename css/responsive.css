@@ -187,3 +187,14 @@
     height: 35px;
   }
 }
+
+/* ===== MOBILE CALENDAR ENHANCEMENTS ===== */
+@media (max-width: 768px) {
+  .fc-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fc-header-toolbar .fc-toolbar-title {
+    font-size: 1.2rem;
+  }
+}
