@@ -6,6 +6,11 @@
   <title>Schedule & Fees - The Language Center</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <!-- FullCalendar Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/main.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.8/main.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.8/main.min.js"></script>
 </head>
 <body>
   <!-- HEADER SECTION UNCHANGED -->
@@ -43,6 +48,9 @@
         <h1>Schedule & Pricing</h1>
         <p>Flexible Schedules and Prices Decided on by Group Members</p>
       </section>
+
+      <!-- CALENDAR CONTAINER -->
+      <div id="calendar-container" class="calendar-wrapper"></div>
 
       <section class="grid-container schedule-grid">
         <article class="card price-card highlight">
@@ -161,6 +169,9 @@
     };
     firebase.initializeApp(firebaseConfig);
   </script>
+  
+  <!-- Add locale script ABOVE main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales/ja.min.js"></script>
   
   <script src="js/main.js"></script>
 </body>
