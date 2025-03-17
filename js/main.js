@@ -54,7 +54,9 @@ function bookClass(eventId, studentEmail) {
   });
 }
 
-// EXISTING CODE BELOW - NO CHANGES =========================
+// Global events array
+let events = [];
+
 document.addEventListener('DOMContentLoaded', function() {
   // Auto-expanding textarea
   const textarea = document.getElementById('message');
@@ -208,51 +210,62 @@ document.addEventListener('DOMContentLoaded', function() {
       item.style.display = text.includes(searchTerm) ? 'block' : 'none';
     });
   });
+
+  // ===== CALENDAR INITIALIZATION =====
+  // Initialize calendar immediately
+  initializeCalendar();
+  
+  // Then load events and re-render calendar
+  fetch('data/events.json')
+    .then(res => res.json())
+    .then(data => {
+      events = data.classes;
+      const calendarEl = document.getElementById('calendar-container');
+      if (calendarEl && calendarEl._fullCalendar) {
+        calendarEl._fullCalendar.destroy();
+      }
+      initializeCalendar();
+    })
+    .catch(console.error);
 });
 
-// EVENT FETCHING & CALENDAR INITIALIZATION ====================
-let events = [];
-
-fetch('/data/events.json')
-  .then(res => res.json())
-  .then(data => {
-    console.log('Events loaded:', data);
-    events = data.classes;
-    initializeCalendar(); // Initialize the calendar after loading events
-  })
-  .catch(error => console.error('Error loading events:', error));
-
 function initializeCalendar() {
-  const calendarEl = document.getElementById('calendar-container');
-  if (!calendarEl) return;
+  try {
+    const calendarEl = document.getElementById('calendar-container');
+    if (!calendarEl) return;
 
-  const calendar = new FullCalendar.Calendar(calendarEl, {
-    locale: document.documentElement.lang === 'ja' ? 'ja' : 'en',
-    initialView: 'dayGridMonth',
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,dayGridWeek,dayGridDay'
-    },
-    events: events.map(event => ({
-      id: event.id,
-      title: event.title,
-      start: event.start,
-      end: event.end,
-      extendedProps: {
-        location: event.location,
-        availableSeats: event.availableSeats,
-        slots: event.slots
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: document.documentElement.lang === 'ja' ? 'ja' : 'en',
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,dayGridWeek,dayGridDay'
+      },
+      events: events.map(event => ({
+        id: event.id,
+        title: event.title,
+        start: event.start,
+        end: event.end,
+        extendedProps: {
+          location: event.location,
+          availableSeats: event.availableSeats,
+          slots: event.slots
+        }
+      })),
+      eventClick: function(info) {
+        showBookingModal({
+          id: info.event.id,
+          title: info.event.title,
+          slots: info.event.extendedProps.slots,
+          availableSeats: info.event.extendedProps.availableSeats
+        });
       }
-    })),
-    eventClick: function(info) {
-      showBookingModal({
-        id: info.event.id,
-        title: info.event.title,
-        slots: info.event.extendedProps.slots,
-        availableSeats: info.event.extendedProps.availableSeats
-      });
-    }
-  });
-  calendar.render();
+    });
+    calendar.render();
+  } catch (error) {
+    console.error('Calendar initialization failed:', error);
+    document.getElementById('calendar-container').innerHTML = 
+      '<p>Calendar failed to load. Please refresh the page.</p>';
+  }
 }
