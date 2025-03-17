@@ -396,3 +396,30 @@ main {
   background: var(--primary-teal);
   color: white;
 }
+
+/* ===== CALENDAR STYLING ===== */
+.fc { 
+  font-family: var(--font-main);
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.fc-daygrid-day {
+  background: white;
+}
+
+.fc-toolbar-title {
+  color: var(--primary-teal);
+}
+
+/* ===== MOBILE CALENDAR ENHANCEMENTS ===== */
+@media (max-width: 768px) {
+  .fc-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fc-header-toolbar .fc-toolbar-title {
+    font-size: 1.2rem;
+  }
+}
