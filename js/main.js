@@ -25,7 +25,12 @@ function showBookingModal(eventData) {
       <button type="submit" class="submit-btn">Confirm Booking</button>
     </form>
   `;
-  
+
+  // Add click handler to close modal when clicking outside
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) modal.remove();
+  });
+
   modal.querySelector('#bookingForm').addEventListener('submit', handleBookingSubmit);
   document.body.appendChild(modal);
 }
@@ -39,7 +44,7 @@ function handleBookingSubmit(e) {
   }
   if (currentBookingEvent) {
     bookClass(currentBookingEvent.id, email);
-    e.target.parentElement.remove();
+    e.target.closest('.booking-modal').remove();
   }
 }
 
@@ -49,8 +54,10 @@ function bookClass(eventId, studentEmail) {
     email: studentEmail,
     timestamp: firebase.database.ServerValue.TIMESTAMP
   })
+  .then(() => alert('Booking confirmed!'))
   .catch((error) => {
     console.error('Booking failed:', error);
+    alert('Booking failed. Please try again.');
   });
 }
 
@@ -181,19 +188,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // ===== NEW FAQ FUNCTIONALITY =====
-  // Accordion Functionality
+  // FAQ Functionality
   document.querySelectorAll('.accordion').forEach(button => {
     button.addEventListener('click', () => {
       const isActive = button.classList.contains('active');
       
-      // Close all accordions first
       document.querySelectorAll('.accordion').forEach(b => {
         b.classList.remove('active');
         b.nextElementSibling.style.maxHeight = null;
       });
       
-      // Open clicked if not active
       if (!isActive) {
         button.classList.add('active');
         const panel = button.nextElementSibling;
@@ -202,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // FAQ Search Functionality
   document.getElementById('faqSearch')?.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
     document.querySelectorAll('.faq-item').forEach(item => {
@@ -211,28 +214,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ===== CALENDAR INITIALIZATION =====
-  // Initialize calendar immediately
-  initializeCalendar();
-  
-  // Then load events and re-render calendar
+  // Calendar Initialization
   fetch('data/events.json')
     .then(res => res.json())
     .then(data => {
       events = data.classes;
-      const calendarEl = document.getElementById('calendar-container');
-      if (calendarEl && calendarEl._fullCalendar) {
-        calendarEl._fullCalendar.destroy();
-      }
       initializeCalendar();
     })
-    .catch(console.error);
+    .catch(error => {
+      console.error('Error loading events:', error);
+      initializeCalendar();
+    });
 });
 
 function initializeCalendar() {
   try {
     const calendarEl = document.getElementById('calendar-container');
     if (!calendarEl) return;
+
+    if (calendarEl._fullCalendar) {
+      calendarEl._fullCalendar.destroy();
+    }
 
     const calendar = new FullCalendar.Calendar(calendarEl, {
       locale: document.documentElement.lang === 'ja' ? 'ja' : 'en',
@@ -244,7 +246,7 @@ function initializeCalendar() {
       },
       events: events.map(event => ({
         id: event.id,
-        title: event.title,
+        title: `${event.title} (${event.availableSeats} seats)`,
         start: event.start,
         end: event.end,
         extendedProps: {
@@ -262,10 +264,14 @@ function initializeCalendar() {
         });
       }
     });
+
     calendar.render();
+    calendarEl._fullCalendar = calendar;
   } catch (error) {
     console.error('Calendar initialization failed:', error);
-    document.getElementById('calendar-container').innerHTML = 
-      '<p>Calendar failed to load. Please refresh the page.</p>';
+    const calendarEl = document.getElementById('calendar-container');
+    if (calendarEl) {
+      calendarEl.innerHTML = '<p>Error loading calendar. Please refresh.</p>';
+    }
   }
 }
