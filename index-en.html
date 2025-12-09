@@ -89,75 +89,195 @@
     <!-- Right panel: inline manga-style SVG characters (teacher + two children) -->
     <div class="right-panel" aria-hidden="false">
       <!-- role and title for accessibility, see MDN & a11y guidance -->
-      <svg class="hero-illustration" role="img" aria-labelledby="illustrationTitle illustrationDesc" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-        <title id="illustrationTitle">Teacher and children learning together</title>
-        <desc id="illustrationDesc">A friendly teacher with glasses and two elementary school children engaging in a fun English activity in a manga-like style.</desc>
+      <!-- Improved manga-style inline SVG: teacher + two children -->
+<svg class="hero-illustration" role="img" aria-labelledby="illustrationTitle illustrationDesc" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <title id="illustrationTitle">Friendly teacher and two elementary-age children learning English</title>
+  <desc id="illustrationDesc">A manga-style scene: a slightly overweight Caucasian male teacher with short brown hair, glasses, short beard and mustache, interacting with a cheerful Japanese boy and girl. Colorful classroom background, kid-friendly expressions.</desc>
 
-        <!-- Background playful clouds -->
-        <rect width="100%" height="100%" rx="20" fill="#fff6b2" />
-        <g transform="translate(40,20)" opacity="0.95">
-          <ellipse cx="700" cy="60" rx="120" ry="40" fill="#ffecf8"/>
-          <ellipse cx="720" cy="95" rx="80" ry="30" fill="#e6fff8"/>
-          <ellipse cx="160" cy="40" rx="90" ry="30" fill="#e6fff8"/>
+  <defs>
+    <!-- soft gradients for skin/hair/clothing -->
+    <linearGradient id="skinGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffe8ce"/>
+      <stop offset="100%" stop-color="#ffd6b0"/>
+    </linearGradient>
+    <linearGradient id="hairBrown" x1="0" x2="1">
+      <stop offset="0%" stop-color="#5c402a"/>
+      <stop offset="100%" stop-color="#7a5838"/>
+    </linearGradient>
+    <linearGradient id="beardGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#4d3524"/>
+      <stop offset="100%" stop-color="#6a4a33"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f7ff"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- subtle highlight for glasses lens -->
+    <linearGradient id="glassShine" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- small soft blush -->
+    <radialGradient id="blush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd1d1" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffd1d1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background: soft classroom + chalkboard -->
+  <rect x="0" y="0" width="1200" height="600" rx="16" fill="#fff9e6"/>
+  <g transform="translate(60,40)">
+    <rect x="0" y="0" width="1080" height="520" rx="12" fill="#fefefe" stroke="#f0e7c2" />
+    <!-- chalkboard -->
+    <rect x="40" y="30" width="540" height="180" rx="6" fill="#22443a" />
+    <g transform="translate(60,48)" fill="#dfffe8" font-family="sans-serif" font-weight="700" font-size="20">
+      <text x="0" y="26">Let's Learn English!</text>
+      <text x="0" y="56" font-size="14">Fun, friendly & easy</text>
+    </g>
+    <!-- posters/stars -->
+    <g transform="translate(620,32)">
+      <rect x="0" y="0" width="360" height="80" rx="8" fill="#fff7f1" stroke="#ffd7e9"/>
+      <text x="18" y="26" font-family="sans-serif" font-weight="800" font-size="18" fill="#ff6fb3">Kids' Corner</text>
+      <g transform="translate(18,38)" fill="#ffd166">
+        <circle cx="0" cy="0" r="6"/><circle cx="18" cy="0" r="6"/><circle cx="36" cy="0" r="6"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- scene group positioned lower for characters -->
+  <g transform="translate(120,130)">
+    <!-- TEACHER (left center) -->
+    <g id="teacher" transform="translate(0,0)" aria-label="Teacher">
+      <!-- shadow under teacher -->
+      <ellipse cx="220" cy="312" rx="160" ry="28" fill="#000" opacity="0.08"/>
+      <!-- torso -->
+      <path d="M140 120 q140 -8 180 80 q28 70 -20 120 q-72 80 -240 16 q-40 -20 -48 -76 q-6 -68 128 -140z"
+            fill="url(#shirtGrad)" stroke="#d6e4ff" stroke-width="1"/>
+      <!-- jacket -->
+      <path d="M120 126 q120 -30 186 74 q-8 52 -46 82 q-80 56 -206 8 q-22 -28 -30 -78 q-6 -58 72 -86z"
+            fill="#ffeef8" stroke="#f6cfee" stroke-width="1"/>
+      <!-- head -->
+      <g transform="translate(200,40)">
+        <!-- head base -->
+        <ellipse cx="0" cy="0" rx="48" ry="60" fill="url(#skinGrad)" stroke="#f2d1b3" stroke-width="0.8"/>
+        <!-- hair (short brown) -->
+        <path d="M-42 -18 q40 -46 92 -18 q-18 6 -40 10 q-28 -2 -52 8z" fill="url(#hairBrown)" stroke="#483222" stroke-width="0.6"/>
+        <!-- face line slight shadow -->
+        <path d="M-12 6 q12 18 28 0" fill="none" stroke="#e4b38a" stroke-width="1.2" opacity="0.7"/>
+        <!-- glasses frame -->
+        <g transform="translate(0,-6)">
+          <rect x="-26" y="-6" width="42" height="24" rx="8" fill="none" stroke="#2b2b2b" stroke-width="3"/>
+          <rect x="6" y="-6" width="26" height="24" rx="8" fill="none" stroke="#2b2b2b" stroke-width="3"/>
+          <rect x="-2" y="0" width="16" height="2" rx="1" fill="#2b2b2b"/>
+          <!-- lenses shine -->
+          <rect x="-18" y="-2" width="14" height="12" rx="3" fill="url(#glassShine)" opacity="0.6"/>
+          <rect x="12" y="-2" width="10" height="12" rx="3" fill="url(#glassShine)" opacity="0.5"/>
         </g>
 
-        <!-- Teacher (center-left) - taller, larger build, short brown hair, glasses, short beard/mustache -->
-        <g id="teacher" transform="translate(220,70)" aria-hidden="false">
-          <!-- body -->
-          <ellipse cx="120" cy="250" rx="95" ry="60" fill="#f3d7ff" />
-          <rect x="45" y="110" width="150" height="150" rx="30" ry="30" fill="#ffd8e8" />
-          <!-- head -->
-          <circle cx="120" cy="60" r="48" fill="#ffe6c9" />
-          <!-- hair -->
-          <path d="M80 45 C90 20,150 22,150 45 C150 45,118 35,80 45 Z" fill="#6b3f2a"/>
-          <!-- glasses -->
-          <g stroke="#333" stroke-width="3" fill="none">
-            <rect x="92" y="52" width="24" height="16" rx="6" />
-            <rect x="52" y="52" width="24" height="16" rx="6" />
-            <line x1="76" y1="60" x2="92" y2="60"/>
-          </g>
-          <!-- beard + mustache -->
-          <path d="M92 76 q28 18 56 0 q-10 22 -28 22 q-18 0 -28 -22z" fill="#5b3a2b" opacity="0.95" transform="translate(-20,4)"/>
-          <!-- eyes (simple manga style) -->
-          <g fill="#333">
-            <ellipse cx="78" cy="60" rx="4" ry="6"/>
-            <ellipse cx="142" cy="60" rx="4" ry="6"/>
-          </g>
-
-          <!-- hand waving (subtle animation via CSS) -->
-          <g id="teacher-hand" transform="translate(200,150)">
-            <path d="M0 0 q20 -10 30 10 q-10 18 -30 6 z" fill="#ffe6c9"/>
-          </g>
-
-          <!-- teaching props: book -->
-          <rect x="60" y="180" width="90" height="12" rx="3" fill="#ffffff" stroke="#d9a3ff"/>
-          <rect x="60" y="195" width="90" height="8" rx="3" fill="#f8e6ff"/>
+        <!-- eyes under glasses -->
+        <g transform="translate(0,6)">
+          <ellipse cx="-10" cy="-2" rx="6" ry="8" fill="#fff"/>
+          <ellipse cx="-10" cy="-2" rx="3" ry="4" fill="#2b2b2b"/>
+          <circle cx="-9" cy="-4" r="1.2" fill="#fff"/>
+          <ellipse cx="14" cy="-2" rx="6" ry="8" fill="#fff"/>
+          <ellipse cx="14" cy="-2" rx="3" ry="4" fill="#2b2b2b"/>
+          <circle cx="13" cy="-4" r="1.2" fill="#fff"/>
         </g>
 
-        <!-- Girl (right) -->
-        <g id="girl" transform="translate(520,190)">
-          <g transform="translate(0,-40)">
-            <circle cx="70" cy="40" r="28" fill="#ffe6c9"/>
-            <path d="M40 40 q30 -30 60 0" fill="#ffd8e8"/>
-            <path d="M55 60 q10 8 30 0" fill="#fff"/>
-            <ellipse cx="60" cy="42" rx="4" ry="6" fill="#333"/>
-            <ellipse cx="80" cy="42" rx="4" ry="6" fill="#333"/>
-            <rect x="40" y="70" width="60" height="40" rx="10" fill="#ffefcf"/>
-          </g>
+        <!-- nose -->
+        <path d="M4 12 q-6 8 -2 12" fill="none" stroke="#e4b38a" stroke-width="1"/>
+
+        <!-- mustache + beard -->
+        <g transform="translate(0,18)">
+          <path d="M-26 2 q26 18 52 0 q-6 14 -26 18 q-18 -2 -26 -18z" fill="url(#beardGrad)" stroke="#3f2c20" stroke-width="0.8" />
+          <!-- slight moustache curve -->
+          <path d="M-16 -2 q16 12 32 0" fill="none" stroke="#2f1f15" stroke-width="1.2"/>
         </g>
 
-        <!-- Boy (right-lower) -->
-        <g id="boy" transform="translate(420,260)">
-          <g transform="translate(0,-20)">
-            <circle cx="40" cy="30" r="24" fill="#ffe6c9"/>
-            <path d="M22 30 q18 -18 36 0" fill="#cfefff"/>
-            <ellipse cx="32" cy="32" rx="3" ry="5" fill="#333"/>
-            <ellipse cx="48" cy="32" rx="3" ry="5" fill="#333"/>
-            <rect x="12" y="50" width="56" height="28" rx="8" fill="#d7f7ff"/>
-          </g>
-        </g>
+        <!-- mouth -->
+        <path d="M-6 26 q10 8 22 0" fill="none" stroke="#c57f64" stroke-width="1.2"/>
 
-      </svg>
+        <!-- blush -->
+        <ellipse cx="-14" cy="16" rx="6" ry="3.8" fill="url(#blush)" opacity="0.95"/>
+        <ellipse cx="24" cy="16" rx="6" ry="3.8" fill="url(#blush)" opacity="0.95"/>
+      </g>
+
+      <!-- arm holding a colorful kids' book -->
+      <g transform="translate(70,210) rotate(-6)">
+        <rect x="0" y="0" width="170" height="10" rx="3" fill="#fff1ff" stroke="#ffc6ea"/>
+        <rect x="8" y="-48" width="60" height="50" rx="6" fill="#ffeecf" stroke="#ffd7a8"/>
+        <rect x="78" y="-48" width="60" height="50" rx="6" fill="#e6fff7" stroke="#bff0e1"/>
+        <text x="16" y="-18" font-size="10" font-family="sans-serif" font-weight="800" fill="#ff6fb3">ABC</text>
+      </g>
+
+      <!-- subtle teacher lapel / tie -->
+      <path d="M192 172 q12 6 28 2" fill="none" stroke="#d1b3ff" stroke-width="2"/>
+    </g>
+
+    <!-- GIRL (right, standing) -->
+    <g id="girl" transform="translate(520,80)" aria-label="Girl student">
+      <ellipse cx="56" cy="132" rx="48" ry="14" fill="#000" opacity="0.06"/>
+      <!-- body -->
+      <path d="M12 60 q28 -26 78 0 q6 30 -10 62 q-26 36 -86 0 q-12 -18 -10 -62z" fill="#fff0d6" stroke="#ffd6b0"/>
+      <!-- head -->
+      <g transform="translate(56,22)">
+        <ellipse cx="0" cy="0" rx="30" ry="34" fill="url(#skinGrad)" />
+        <path d="M-30 -8 q18 -26 62 -6 q-18 18 -62 6z" fill="#ffc6e6" stroke="#ffa7d2"/>
+        <!-- eyes -->
+        <ellipse cx="-8" cy="-2" rx="5.2" ry="6.6" fill="#fff"/>
+        <ellipse cx="-8" cy="-3" rx="2.6" ry="3.4" fill="#232323"/>
+        <ellipse cx="12" cy="-2" rx="5.2" ry="6.6" fill="#fff"/>
+        <ellipse cx="12" cy="-3" rx="2.6" ry="3.4" fill="#232323"/>
+        <circle cx="-7.2" cy="-5" r="0.9" fill="#fff"/>
+        <circle cx="11.2" cy="-5" r="0.9" fill="#fff"/>
+        <!-- mouth -->
+        <path d="M-4 12 q6 6 12 0" fill="none" stroke="#c87d6a" stroke-width="1"/>
+        <!-- blush -->
+        <ellipse cx="-12" cy="4" rx="6" ry="3.2" fill="url(#blush)" opacity="0.9"/>
+        <ellipse cx="18" cy="4" rx="6" ry="3.2" fill="url(#blush)" opacity="0.9"/>
+      </g>
+      <!-- school bag -->
+      <rect x="6" y="110" width="100" height="44" rx="8" fill="#fff6f0" stroke="#ffddd1"/>
+      <text x="16" y="138" font-family="sans-serif" font-weight="700" font-size="12" fill="#ff8aa5">School</text>
+    </g>
+
+    <!-- BOY (right-lower, seated / playful) -->
+    <g id="boy" transform="translate(420,170)" aria-label="Boy student">
+      <ellipse cx="60" cy="96" rx="44" ry="12" fill="#000" opacity="0.06"/>
+      <path d="M12 18 q32 -24 84 6 q6 26 -6 54 q-26 30 -80 6 q-8 -18 -4 -66z" fill="#e6f7ff" stroke="#cfeeff"/>
+      <g transform="translate(60,6)">
+        <ellipse cx="0" cy="0" rx="26" ry="30" fill="url(#skinGrad)"/>
+        <path d="M-24 -6 q20 -22 52 -6 q-16 10 -52 6z" fill="#d7f0ff" stroke="#bfe6ff"/>
+        <ellipse cx="-6" cy="-4" rx="4.6" ry="6" fill="#fff"/>
+        <ellipse cx="-6" cy="-4" rx="2.2" ry="3" fill="#232323"/>
+        <ellipse cx="12" cy="-4" rx="4.6" ry="6" fill="#fff"/>
+        <ellipse cx="12" cy="-4" rx="2.2" ry="3" fill="#232323"/>
+        <circle cx="-5" cy="-6" r="0.8" fill="#fff"/>
+        <circle cx="11.5" cy="-6" r="0.8" fill="#fff"/>
+        <path d="M-6 12 q6 5 14 0" fill="none" stroke="#c87d6a" stroke-width="1"/>
+      </g>
+      <!-- toy pencil in hand -->
+      <rect x="84" y="78" width="34" height="6" rx="3" fill="#ffd6a6" stroke="#ffb56b"/>
+    </g>
+  </g>
+
+  <!-- decorative lower border -->
+  <g transform="translate(140,520)">
+    <rect x="0" y="0" width="920" height="48" rx="10" fill="#fff" opacity="0.85"/>
+  </g>
+
+  <!-- accessibility: hide animated parts for reduced-motion -->
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .teacher-wave { animation: none !important; transform: none !important; }
+    }
+  </style>
+</svg>
     </div>
   </section>
 
