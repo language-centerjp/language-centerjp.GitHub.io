@@ -124,11 +124,40 @@ main {
   color: var(--white-color);
   padding: 4rem 2rem;
   margin-bottom: 2rem;
+  box-sizing: border-box;
+
+  /* layout: text left, image right */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
+/* left column */
 .left-panel {
-  max-width: 1200px;
-  margin: 0 auto;
+  flex: 1 1 60%;
+  max-width: 60%;
+  margin: 0; /* remove auto-centering for flex layout */
+}
+
+/* right column */
+.right-panel {
+  flex: 0 0 36%;
+  max-width: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ensure the image scales nicely inside the right panel */
+.hero-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 /* ===== CTA BANNER ===== */
