@@ -43,9 +43,31 @@
     font-size: 0.9em;
   }
 
-  /* Hero Section */
+      /* ===== HERO SECTION (mobile) ===== */
   #hero {
+    flex-direction: column-reverse; /* text first, image below */
+    align-items: stretch;
     padding: 2rem 1rem !important;
+  }
+
+  .left-panel,
+  .right-panel {
+    max-width: 100%;
+    width: 100%;
+    flex: none;
+  }
+
+  .right-panel {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-illustration {
+    width: 92%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 
   /* CTA Banner */
